@@ -1,0 +1,24 @@
+.related-courses {
+	min-width: @container;
+	padding: 50px 0;
+}
+
+.related-course {
+	&__title {
+		font-size: @medium;
+		font-weight: normal;
+		margin-bottom: 50px;
+		.title--arrowed;
+	}
+	&__link {
+		&:hover {
+			opacity: 0.9;
+		}
+		&:active {
+			opacity: 0.8;
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+}
