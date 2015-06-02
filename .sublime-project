@@ -1,0 +1,15 @@
+{
+    "settings":
+    {
+        "less2css":
+        {
+              "outputDir": "auto",
+              "minify": false,
+              "minName": false,
+              "autoCompile": true,
+              "showErrorWithWindow": true,
+              "main_file": "../../s.less",
+               
+        }
+    }
+}
