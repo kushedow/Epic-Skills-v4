@@ -2,7 +2,7 @@
      .details-info {
 		&__column {
 			text-align: left;
-			p { display: inline-block; } // из-за добавления стилей бобра
+			p { display: inline-block; vertical-align: middle; } // из-за добавления стилей бобра
 		}
 		&__img {
 			width: 50px;
@@ -10,8 +10,11 @@
 		}
 		&__text {
 			display: inline-block;
+			width: 70%;
+			margin: 0;
 		}
 	}
+	.details__heading { width: 250px; font-size: @h3; }
 	.line-mobile {
 		background-image: url(../blocks/details/line-mobile.png);
 		padding: 15px;

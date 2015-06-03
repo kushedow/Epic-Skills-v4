@@ -196,6 +196,7 @@ li {
   }
   .course-promo__button {
     padding: 5px 30px;
+    font-size: 16px;
   }
 }
 .details-anchor {
@@ -276,6 +277,7 @@ li {
   }
   .details-info__column p {
     display: inline-block;
+    vertical-align: middle;
   }
   .details-info__img {
     width: 50px;
@@ -283,6 +285,12 @@ li {
   }
   .details-info__text {
     display: inline-block;
+    width: 70%;
+    margin: 0;
+  }
+  .details__heading {
+    width: 250px;
+    font-size: 22px;
   }
   .line-mobile {
     background-image: url(../blocks/details/line-mobile.png);
@@ -395,6 +403,43 @@ li {
 }
 .programm-teacher__position {
   font-size: 16px;
+}
+@media (max-width: 500px) {
+  .programm-info__teacher {
+    display: none;
+  }
+  .programm-info__description {
+    display: none;
+  }
+  .programm-info__do {
+    display: none;
+  }
+  .programm-teacher__description {
+    display: none;
+  }
+  .programm-day__info ul {
+    display: none;
+  }
+  .programm-day__image {
+    width: 50px;
+  }
+  .programm-info__lesson-title {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+  .programm-info__subtitle {
+    margin-bottom: 0;
+  }
+  .programm-day {
+    padding: 20px 0 0 0;
+  }
+  .programm-day .row {
+    margin: 0;
+  }
+  .programm-info__lesson-title {
+    padding-left: 15px;
+  }
 }
 .team {
   padding: 20px 0 140px 0;
@@ -548,6 +593,15 @@ li {
   color: #ffffff;
   text-decoration: none;
 }
+@media (max-width: 500px) {
+  .faq .row {
+    margin: 0;
+  }
+  .faq__heading {
+    width: 250px;
+    font-size: 22px;
+  }
+}
 .process {
   background-color: #2e2e2e;
   padding: 30px 0 40px 0;
@@ -638,5 +692,19 @@ li {
 @media (min-width: 768px) and (max-width: 1100px) {
   .related-course__title {
     font-size: 21px;
+  }
+}
+@media (max-width: 500px) {
+  footer .row {
+    margin: 0;
+  }
+  footer .container {
+    width: 320px;
+  }
+  footer.newBlack a.mail {
+    margin-top: 10px;
+  }
+  footer.newBlack .vk {
+    float: none;
   }
 }
