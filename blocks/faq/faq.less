@@ -13,13 +13,18 @@
 	margin-bottom: 34px;
 	padding-right: 40px;
 	&__question {
-		font-size: @lead;
 		margin-bottom: 10px;
 		cursor: pointer;
 		display: inline-block;
-		border-bottom: 1px dashed @dark;
 		position: relative;
 		margin-left: 35px;
+		cursor: pointer;
+		p {
+			font-size: @lead;
+			line-height: @lead + 6px;
+			display: inline;
+			border-bottom: 1px dashed @dark;
+		}
 		&:before {
 			content:" ";
 			display: block;
@@ -80,7 +85,7 @@
 }
 
 @import "../blocks/faq/faq--phone.less"; 
-
+@import "../blocks/faq/faq--tablet.less"; 
 
 
 

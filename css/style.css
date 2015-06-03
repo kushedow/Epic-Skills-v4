@@ -182,7 +182,7 @@ li {
 .course-promo__button:active {
   opacity: 0.6;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .course-promo__heading {
     padding-top: 30px;
   }
@@ -193,6 +193,7 @@ li {
   .course-promo__descripton {
     font-size: 18px;
     line-height: 22px;
+    padding: 0;
   }
   .course-promo__button {
     padding: 5px 30px;
@@ -271,7 +272,7 @@ li {
   height: 2px;
   background-color: #d73030;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .details-info__column {
     text-align: left;
   }
@@ -301,6 +302,11 @@ li {
   }
   .details-list__column {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .details__heading {
+    max-width: 200px;
   }
 }
 .programm__heading {
@@ -404,7 +410,15 @@ li {
 .programm-teacher__position {
   font-size: 16px;
 }
-@media (max-width: 500px) {
+@media (min-width: 768px) and (max-width: 900px) {
+  .programm-teacher__description {
+    max-width: 153px;
+  }
+  .programm-day .row {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
   .programm-info__teacher {
     display: none;
   }
@@ -444,7 +458,7 @@ li {
 .team {
   padding: 20px 0 140px 0;
   color: #ffffff;
-  background-color: #f2f2f2;
+  background-color: #141217;
   background-image: url(../blocks/team/team__bg.png);
   background-size: cover;
 }
@@ -492,6 +506,26 @@ li {
     height: auto;
   }
 }
+@media (max-width: 767px) {
+  .team {
+    padding-bottom: 20px;
+  }
+  .team-person {
+    margin-top: 20px;
+  }
+  .team-person .row {
+    margin: 0;
+  }
+  .team-person__name {
+    font-size: 18px;
+  }
+  .team-person__subtitle {
+    font-size: 16px;
+  }
+  .team-person__text {
+    display: none;
+  }
+}
 .faq__heading {
   position: relative;
   font-size: 28px;
@@ -531,13 +565,17 @@ li {
   padding-right: 40px;
 }
 .faq-item__question {
-  font-size: 18px;
   margin-bottom: 10px;
-  cursor: pointer;
   display: inline-block;
-  border-bottom: 1px dashed #353535;
   position: relative;
   margin-left: 35px;
+  cursor: pointer;
+}
+.faq-item__question p {
+  font-size: 18px;
+  line-height: 24px;
+  display: inline;
+  border-bottom: 1px dashed #353535;
 }
 .faq-item__question:before {
   content: " ";
@@ -593,13 +631,58 @@ li {
   color: #ffffff;
   text-decoration: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .faq .row {
     margin: 0;
   }
   .faq__heading {
     width: 250px;
     font-size: 22px;
+  }
+  .faq-info {
+    margin-top: 0;
+  }
+  .faq-item__answer {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .faq-curator {
+    padding: 25px;
+    text-align: left;
+  }
+  .faq-img__wrapper {
+    width: 30%;
+    margin-right: 6%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .curator-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+  }
+  .faq-curator {
+    border-top: 0;
+  }
+  .faq-curator__position {
+    font-size: 13px;
+  }
+  .faq-curator__name {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .faq-curator__phone {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .faq__heading {
+    max-width: 200px;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .faq .row {
+    margin: 0;
   }
 }
 .process {
@@ -618,6 +701,7 @@ li {
 .process-images__image-item {
   border: 3px solid #ffffff;
   width: 100%;
+  margin-bottom: 25px;
 }
 .process-images .row {
   margin: 0;
@@ -640,6 +724,9 @@ li {
 }
 .feedback-info {
   margin-bottom: 10px;
+}
+.feedback-item {
+  margin-bottom: 15px;
 }
 .feedback-item__img {
   display: inline-block;
@@ -694,17 +781,29 @@ li {
     font-size: 21px;
   }
 }
+@media (min-width: 421px) and (max-width: 767px) {
+  footer .container {
+    width: 420px;
+  }
+}
+@media (min-width: 320px) and (max-width: 420px) {
+  footer .container {
+    width: 320px;
+  }
+}
 @media (max-width: 500px) {
   footer .row {
     margin: 0;
-  }
-  footer .container {
-    width: 320px;
   }
   footer.newBlack a.mail {
     margin-top: 10px;
   }
   footer.newBlack .vk {
     float: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  footer .container {
+    width: 720px;
   }
 }
