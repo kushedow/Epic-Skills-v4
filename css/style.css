@@ -143,13 +143,15 @@ li {
 /* promo/promo.less */
 .course-promo {
   overflow: hidden;
-  min-width: 1180px;
   background-image: url(../blocks/course-promo/course-promo__bg.jpg);
   background-size: cover;
   background-position: center center;
   background-color: #000;
   padding-top: 135px;
   padding-bottom: 105px;
+}
+.course-promo__heading {
+  padding-top: 100px;
 }
 .course-promo__heading span {
   font-size: 42px;
@@ -180,10 +182,20 @@ li {
 .course-promo__button:active {
   opacity: 0.6;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+  .course-promo__heading {
+    padding-top: 30px;
+  }
+  .course-promo__heading span {
+    font-size: 24px;
+    line-height: 30px;
+  }
   .course-promo__descripton {
     font-size: 18px;
     line-height: 22px;
+  }
+  .course-promo__button {
+    padding: 5px 30px;
   }
 }
 .details-anchor {
@@ -191,7 +203,6 @@ li {
   top: -43px;
 }
 .details {
-  min-width: 1180px;
   margin-bottom: 130px;
 }
 .details__heading {
@@ -225,7 +236,8 @@ li {
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
 }
-.details-info div {
+.details-info__column {
+  margin-bottom: 10px;
   text-align: center;
 }
 .details-info__text {
@@ -258,8 +270,30 @@ li {
   height: 2px;
   background-color: #d73030;
 }
-.programm {
-  min-width: 1180px;
+@media (max-width: 500px) {
+  .details-info__column {
+    text-align: left;
+  }
+  .details-info__column p {
+    display: inline-block;
+  }
+  .details-info__img {
+    width: 50px;
+    margin-right: 18px;
+  }
+  .details-info__text {
+    display: inline-block;
+  }
+  .line-mobile {
+    background-image: url(../blocks/details/line-mobile.png);
+    padding: 15px;
+  }
+  .details-list {
+    margin-top: 20px;
+  }
+  .details-list__column {
+    margin-bottom: 20px;
+  }
 }
 .programm__heading {
   position: relative;
@@ -363,7 +397,6 @@ li {
   font-size: 16px;
 }
 .team {
-  min-width: 1180px;
   padding: 20px 0 140px 0;
   color: #ffffff;
   background-color: #f2f2f2;
@@ -407,6 +440,12 @@ li {
   right: 0;
   width: 70px;
   height: auto;
+}
+@media (max-width: 1024px) {
+  .team-person__img {
+    width: 100%;
+    height: auto;
+  }
 }
 .faq__heading {
   position: relative;
@@ -510,7 +549,6 @@ li {
   text-decoration: none;
 }
 .process {
-  min-width: 1180px;
   background-color: #2e2e2e;
   padding: 30px 0 40px 0;
   color: #ffffff;
@@ -540,7 +578,6 @@ li {
   padding: 20px;
 }
 .feedback {
-  min-width: 1180px;
   padding: 70px 0;
 }
 .feedback__heading {
@@ -571,7 +608,6 @@ li {
   font-size: 18px;
 }
 .related-courses {
-  min-width: 1180px;
   padding: 50px 0;
 }
 .related-course__title {

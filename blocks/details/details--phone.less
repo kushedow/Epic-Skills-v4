@@ -1,1 +1,26 @@
- 
+@media (max-width: 500px) {
+     .details-info {
+		&__column {
+			text-align: left;
+			p { display: inline-block; } // из-за добавления стилей бобра
+		}
+		&__img {
+			width: 50px;
+  			margin-right: 18px;
+		}
+		&__text {
+			display: inline-block;
+		}
+	}
+	.line-mobile {
+		background-image: url(../blocks/details/line-mobile.png);
+		padding: 15px;
+	}
+	.details-list {
+	  margin-top: 20px;
+	  &__column {
+	  	margin-bottom: 20px;
+	  }
+	}
+ }
+  
