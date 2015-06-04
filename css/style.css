@@ -171,16 +171,22 @@ li {
   color: #353535;
   border: 3px solid #48d071;
   border-radius: 10px;
-  padding: 15px 30px;
+  padding: 15px 64px 15px 30px;
   cursor: pointer;
   display: inline-block;
+  background-image: url(../blocks/course-promo/course-promo__icon.png);
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
 }
 .course-promo__button:hover {
   opacity: 0.8;
   text-decoration: none;
+  color: #353535;
 }
 .course-promo__button:active {
   opacity: 0.6;
+  text-decoration: none;
+  color: #353535;
 }
 @media (max-width: 767px) {
   .course-promo__heading {
@@ -479,7 +485,7 @@ li {
   margin-bottom: 20px;
 }
 .team-person__subtitle {
-  font-size: 22px;
+  font-size: 17px;
   margin-bottom: 20px;
 }
 .team-person__text {
@@ -625,8 +631,15 @@ li {
 }
 .faq-curator__button:active {
   opacity: 0.5;
+  color: #ffffff;
+  text-decoration: none;
 }
 .faq-curator__button:hover {
+  opacity: 0.8;
+  color: #ffffff;
+  text-decoration: none;
+}
+.faq-curator__button:visited {
   opacity: 0.8;
   color: #ffffff;
   text-decoration: none;
