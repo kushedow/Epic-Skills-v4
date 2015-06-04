@@ -77,6 +77,12 @@
   height: 4px;
   background-color: #d73030;
 }
+.box-bordered {
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 4px solid #d73030;
+  border-radius: 3px;
+}
 /* ////////////////////////////////////////////////////// */
 /*	    	       Зонирование     			 	*/
 /* ////////////////////////////////////////////////////// */
@@ -725,8 +731,16 @@ li {
   padding: 45px 0;
 }
 .register-form {
-  background-color: #ffffff;
   padding: 20px;
+  background-color: #ffffff;
+  border-top: 4px solid #d73030;
+  border-radius: 3px;
+}
+.register-info {
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 4px solid #d73030;
+  border-radius: 3px;
 }
 .feedback {
   padding: 70px 0;
