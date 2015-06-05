@@ -2,13 +2,45 @@
 
 .course-promo{
 	overflow: hidden;
-	background-image: url(../blocks/course-promo/course-promo__bg.jpg);
+	// background-image: url(../blocks/course-promo/course-promo__bg.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-color: #000;
-	padding-top: 135px;
-	padding-bottom: 105px;
+	// padding-top: 135px;
+	// padding-bottom: 105px;
+	&__info {
+		width: 650px;
+		padding: 10px;
+		border: 3px solid @white;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+}
 
+.course-info {
+	&__wrap {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		padding-left: 55px;
+		background-repeat: no-repeat;
+		color: @white;
+	}
+	&__dates { 
+		width: 170px; 
+		background-image: url(../blocks/course-promo/icon-days.png);
+		background-position: 5% 50%;
+	}
+	&__lessons { 
+		width: 190px; 
+		background-image: url(../blocks/course-promo/icon-lessons.png);
+		background-position: 7% 50%;
+	}
+	&__pay { 
+		width: 230px;  
+		background-image: url(../blocks/course-promo/icon-pay.png);
+		background-position: 3% 50%;
+	}
 }
 	.course-promo__heading {
 		padding-top: 100px;
@@ -30,24 +62,29 @@
 	.course-promo__button{
 		font-size: 18px;
 		line-height: @lh-m;
-		color: @dark;
-		border: 3px solid @green;
+		color: @white;
+		background-color: @red;
 		border-radius: 10px;
 		padding: 15px 64px 15px 30px;
 		cursor: pointer;
 		display: inline-block;
 		background-image: url(../blocks/course-promo/course-promo__icon.png);
 		background-repeat: no-repeat;
-  		background-position: 92% 50%;
+  		background-position: 94% 50%;
 		&:hover {
 			opacity: 0.8;
 			text-decoration: none;
-			color: @dark;
+			color: @white;
 		}
 		&:active {
 			opacity: 0.6;
 			text-decoration: none;
-			color: @dark;
+			color: @white;
+		}
+		&:focus {
+			opacity: 0.6;
+			text-decoration: none;
+			color: @white;
 		}
 	}
 
