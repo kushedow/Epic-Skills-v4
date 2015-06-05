@@ -147,6 +147,31 @@ li {
   padding: 0px;
 }
 /* promo/promo.less */
+@font-face {
+  font-family: "Flaticon";
+  src: url("../blocks/course-promo/flaticon.eot");
+  src: url("../blocks/course-promo/flaticon.eot#iefix") format("embedded-opentype"), url("../blocks/course-promo/flaticon.woff") format("woff"), url("../blocks/course-promo/flaticon.ttf") format("truetype"), url("../blocks/course-promo/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.flaticon-calendar146:before {
+  content: "\e000";
+}
+.flaticon-clock100:before {
+  content: "\e001";
+}
+.flaticon-wallets3:before {
+  content: "\e002";
+}
+div[class^="flaticon-"]:before,
+div[class*=" flaticon-"]:before,
+div[class^="flaticon-"]:after,
+div[class*=" flaticon-"]:after {
+  font-family: "Flaticon";
+  font-size: 30px;
+  font-style: normal;
+  color: #ffffff;
+}
 .course-promo {
   overflow: hidden;
   background-size: cover;
@@ -154,34 +179,59 @@ li {
   background-color: #000;
 }
 .course-promo__info {
-  width: 650px;
+  width: 680px;
   padding: 10px;
   border: 3px solid #ffffff;
   margin: 0 auto;
   margin-bottom: 60px;
+  border-radius: 3px;
+}
+.course-promo__info--bg-white {
+  background-color: #ffffff;
+}
+.course-promo__info--bg-white .course-info__wrap {
+  color: #353535;
+}
+.course-promo__info--bg-white div[class^="flaticon-"]:before,
+.course-promo__info--bg-white div[class*=" flaticon-"]:before,
+.course-promo__info--bg-white div[class^="flaticon-"]:after,
+.course-promo__info--bg-white div[class*=" flaticon-"]:after {
+  color: #353535;
 }
 .course-info__wrap {
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  padding-left: 55px;
-  background-repeat: no-repeat;
   color: #ffffff;
 }
 .course-info__dates {
-  width: 170px;
-  background-image: url(../blocks/course-promo/icon-days.png);
-  background-position: 5% 50%;
+  width: 150px;
 }
 .course-info__lessons {
-  width: 190px;
-  background-image: url(../blocks/course-promo/icon-lessons.png);
-  background-position: 7% 50%;
+  width: 200px;
 }
 .course-info__pay {
   width: 230px;
-  background-image: url(../blocks/course-promo/icon-pay.png);
-  background-position: 3% 50%;
+}
+.course-info__text {
+  display: inline-block;
+  vertical-align: top;
+  width: 66%;
+}
+.course-info__icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  margin-right: 2%;
+  text-align: center;
+}
+.course-text__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.course-text__subtitle {
+  font-size: 14px;
+  font-weight: normal;
 }
 .course-promo__heading {
   padding-top: 100px;
@@ -243,6 +293,37 @@ li {
     padding: 5px 30px;
     font-size: 16px;
   }
+}
+.course-inside__heading {
+  position: relative;
+  font-size: 28px;
+  top: -43px;
+  background-color: #ffffff;
+  width: 400px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.course-inside__heading:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -45px;
+  top: 0;
+  border-bottom: 50px solid #ffffff;
+  border-left: 45px solid transparent;
+}
+.course-inside__heading:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -45px;
+  top: 0;
+  border-bottom: 50px solid #ffffff;
+  border-right: 45px solid transparent;
 }
 .details-anchor {
   position: relative;

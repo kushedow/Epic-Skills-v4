@@ -1,5 +1,27 @@
 /* promo/promo.less */
 
+@font-face {
+	font-family: "Flaticon";
+	src: url("../blocks/course-promo/flaticon.eot");
+	src: url("../blocks/course-promo/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../blocks/course-promo/flaticon.woff") format("woff"),
+	url("../blocks/course-promo/flaticon.ttf") format("truetype"),
+	url("../blocks/course-promo/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.flaticon-calendar146:before { content: "\e000"; }
+.flaticon-clock100:before { content: "\e001"; }
+.flaticon-wallets3:before { content: "\e002"; }
+
+div[class^="flaticon-"]:before, div[class*=" flaticon-"]:before, div[class^="flaticon-"]:after, div[class*=" flaticon-"]:after {
+    font-family:"Flaticon";
+    font-size: 30px;
+    font-style: normal;
+    color: @white;
+}
+
 .course-promo{
 	overflow: hidden;
 	// background-image: url(../blocks/course-promo/course-promo__bg.jpg);
@@ -9,11 +31,17 @@
 	// padding-top: 135px;
 	// padding-bottom: 105px;
 	&__info {
-		width: 650px;
+		width: 680px;
 		padding: 10px;
 		border: 3px solid @white;
 		margin: 0 auto;
 		margin-bottom: 60px;
+		border-radius: 3px;
+	}
+	&__info--bg-white {
+		background-color: @white;
+		.course-info__wrap { color: @dark; }
+		div[class^="flaticon-"]:before, div[class*=" flaticon-"]:before, div[class^="flaticon-"]:after, div[class*=" flaticon-"]:after { color: @dark; }
 	}
 }
 
@@ -22,24 +50,32 @@
 		display: inline-block;
 		vertical-align: top;
 		text-align: left;
-		padding-left: 55px;
-		background-repeat: no-repeat;
 		color: @white;
 	}
-	&__dates { 
-		width: 170px; 
-		background-image: url(../blocks/course-promo/icon-days.png);
-		background-position: 5% 50%;
+	&__dates { width: 150px; }
+	&__lessons { width: 200px; }
+	&__pay { width: 230px; }
+	&__text {
+		display: inline-block;
+		vertical-align: top;
+		width: 66%;
 	}
-	&__lessons { 
-		width: 190px; 
-		background-image: url(../blocks/course-promo/icon-lessons.png);
-		background-position: 7% 50%;
+	&__icon {
+		display: inline-block;
+		vertical-align: top;
+		width: 28%;
+		margin-right: 2%;
+		text-align: center;
 	}
-	&__pay { 
-		width: 230px;  
-		background-image: url(../blocks/course-promo/icon-pay.png);
-		background-position: 3% 50%;
+}
+.course-text {
+	&__title {
+		font-size: @lead;
+		font-weight: bold;
+	}
+	&__subtitle {
+		font-size: @small+1px;
+		font-weight: normal;
 	}
 }
 	.course-promo__heading {
