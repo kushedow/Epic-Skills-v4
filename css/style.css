@@ -155,6 +155,11 @@ li {
   line-height: 56px;
   height: 56px;
 }
+.site-logo:hover {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
 .site-logo__link {
   display: block;
 }
