@@ -1,3 +1,4 @@
+// пункты меню навигации
 - var mainNav = ['Кто мы','Ближайшие курсы', 'Отзывы', 'Журнал', 'Контакты']
 
 // стандартная шапочка сайта
@@ -8,8 +9,10 @@ header.header
         img.site-logo__image(src='../blocks/header/site-logo__image.svg')
         img.site-logo__name(src='../blocks/header/site-logo__name.svg')
 
+    // выпадашка
+
     // навигация
-    nav.main-nav
+    nav.main-nav.hidden-xs
       ul
         each item in mainNav
           li
