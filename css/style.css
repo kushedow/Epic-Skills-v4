@@ -31,7 +31,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  left: -45px;
+  left: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-left: 45px solid transparent;
@@ -42,7 +42,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  right: -45px;
+  right: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
@@ -198,8 +198,8 @@ li {
 /* promo/promo.less */
 @font-face {
   font-family: "Flaticon";
-  src: url("http://a.epixx.ru/v4/blocks/course-promo/flaticon.eot");
-  src: url("http://a.epixx.ru/v4/blocks/course-promo/flaticon.eot#iefix") format("embedded-opentype"), url("http://a.epixx.ru/v4/blocks/course-promo/flaticon.woff") format("woff"), url("http://a.epixx.ru/v4/blocks/course-promo/flaticon.ttf") format("truetype"), url("http://a.epixx.ru/v4/blocks/course-promo/flaticon.svg") format("svg");
+  src: url("http://epixx.ru/files/flaticon.eot");
+  src: url("http://epixx.ru/files/flaticon.eot#iefix") format("embedded-opentype"), url("http://epixx.ru/files/flaticon.woff") format("woff"), url("http://epixx.ru/files/flaticon.ttf") format("truetype"), url("http://epixx.ru/files/flaticon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -285,6 +285,7 @@ div[class*=" flaticon-"]:after {
 }
 .course-promo__heading {
   padding-top: 100px;
+  color: #ffffff;
 }
 .course-promo__heading span {
   font-size: 42px;
@@ -293,6 +294,7 @@ div[class*=" flaticon-"]:after {
   margin-bottom: 54px;
 }
 .course-promo__descripton {
+  color: #ffffff;
   margin-bottom: 42px;
   font-size: 22px;
   line-height: 32px;
@@ -302,6 +304,7 @@ div[class*=" flaticon-"]:after {
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
+  margin-bottom: 80px;
   background-color: #ea6161;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -357,7 +360,7 @@ div[class*=" flaticon-"]:after {
   width: 400px;
   padding-top: 20px;
   margin: 0 auto;
-  top: -80px;
+  top: -60px;
 }
 .course-inside__heading:before {
   content: " ";
@@ -365,7 +368,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  left: -45px;
+  left: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-left: 45px solid transparent;
@@ -376,18 +379,21 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  right: -45px;
+  right: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
 }
 .course-benefits__title {
   font-size: 32px;
+  line-height: 38px;
   font-weight: normal;
   margin-bottom: 35px;
 }
 .course-benefits__heading {
   font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 5px;
   font-weight: normal;
 }
 .course-benefits__question {
@@ -466,7 +472,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  left: -45px;
+  left: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-left: 45px solid transparent;
@@ -477,7 +483,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  right: -45px;
+  right: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
@@ -570,7 +576,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  left: -45px;
+  left: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-left: 45px solid transparent;
@@ -581,7 +587,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  right: -45px;
+  right: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
@@ -701,9 +707,8 @@ div[class*=" flaticon-"]:after {
   }
 }
 .team {
-  padding: 20px 0 140px 0;
   color: #ffffff;
-  background-color: #141217;
+  background-color: #dae7eb;
   background-image: url(../blocks/team/team__bg.png);
   background-size: cover;
 }
@@ -787,7 +792,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  left: -45px;
+  left: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-left: 45px solid transparent;
@@ -798,7 +803,7 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   width: 0;
   height: 0;
-  right: -45px;
+  right: -44px;
   top: 0;
   border-bottom: 50px solid #ffffff;
   border-right: 45px solid transparent;
