@@ -1,1 +1,16 @@
+- var mainNav = ['Кто мы','Ближайшие курсы', 'Отзывы', 'Журнал', 'Контакты']
+
 // стандартная шапочка сайта
+header.header
+  .container
+    .site-logo
+      a.site-logo__link(href='#')
+        img.site-logo__image(src='../blocks/header/site-logo__image.svg')
+        img.site-logo__name(src='../blocks/header/site-logo__name.svg')
+
+    // навигация
+    nav.main-nav
+      ul
+        each item in mainNav
+          li
+            a(href='#')= item

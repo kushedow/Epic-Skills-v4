@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-  </head>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
+
   <body>
     <!-- стандартная шапочка сайта-->
+    <header class="header">
+      <div class="container">
+        <div class="site-logo">
+          <a href="#" class="site-logo__link"><img src="../blocks/header/site-logo__image.svg" class="site-logo__image"><img src="../blocks/header/site-logo__name.svg" class="site-logo__name"></a>
+        </div>
+        <!-- навигация-->
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Кто мы</a></li>
+            <li><a href="#">Ближайшие курсы</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Журнал</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- Промо-блок курса-->
     <div class="course-promo text-center">
       <h1 class="course-promo__heading"> LEVEL UP для веб-дизайнера,<br>который хочет подрасти </h1>
-      <p class="course-promo__descripton"> Единственные курсы Веб-дизайна в Санкт-Петербурге,<br>в которых собраны проектирование, прототипирование,<br>обучение программам Axure и Adobe Photoshop, решение кейсов<br>и возможность создать портфолио в процессе обучения.<br>Вы научитесь делать невозможное.</p>
+      <p class="course-promo__descripton"> Единственные курсы Веб-дизайна в Санкт-Петербурге,
+        <br>в которых собраны проектирование, прототипирование,
+        <br>обучение программам Axure и Adobe Photoshop, решение кейсов
+        <br>и возможность создать портфолио в процессе обучения.
+        <br>Вы научитесь делать невозможное.</p>
       <div class="course-promo__info">
         <div class="course-info__wrap course-info__dates">
           <div class="course-info__icon flaticon-calendar146"></div>
@@ -35,8 +57,7 @@
             <div class="course-text__subtitle">при оплате до 16 июня</div>
           </div>
         </div>
-      </div><a href="#register" class="course-promo__button"> Да, я хочу двигаться дальше</a>
-    </div>
+      </div><a href="#register" class="course-promo__button"> Да, я хочу двигаться дальше</a> </div>
     <div class="course-inside">
       <div class="container">
         <div class="course-inside__heading text-center">Что внутри</div>
@@ -45,17 +66,17 @@
             <div class="course-inside__benefits">
               <h2 class="course-benefits__title">Что вы получите после завершения курса?</h2>
               <div class="course-benefits__wrap">
-                <div class="course-benefits__item"> 
+                <div class="course-benefits__item">
                   <h3 class="course-benefits__heading">Два модных проекта в портфолио</h3>
                   <p class="course-benefits__question">Почему это важно?</p>
                   <p class="course-benefits__answer">Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.</p>
                 </div>
-                <div class="course-benefits__item"> 
+                <div class="course-benefits__item">
                   <h3 class="course-benefits__heading">Два модных проекта в портфолио</h3>
                   <p class="course-benefits__question">Почему это важно?</p>
                   <p class="course-benefits__answer">Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.</p>
                 </div>
-                <div class="course-benefits__item"> 
+                <div class="course-benefits__item">
                   <h3 class="course-benefits__heading">Два модных проекта в портфолио</h3>
                   <p class="course-benefits__question">Почему это важно?</p>
                   <p class="course-benefits__answer">Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.</p>
@@ -67,15 +88,13 @@
             <div class="course-inside__project">
               <div class="course-project__img"><img src="blocks/course-inside/course-project__img1.jpg" alt="" target="_blank"></div>
               <div class="course-project__title">Монгольерфкин</div>
-              <div class="course-project__subtitle">Посадочная страница</div><a class="course-project__button">Смотреть работу</a>
-            </div>
+              <div class="course-project__subtitle">Посадочная страница</div><a class="course-project__button">Смотреть работу</a> </div>
           </div>
           <div class="col-xs-4 course-inside__wrap">
             <div class="course-inside__project">
               <div class="course-project__img"><img src="blocks/course-inside/course-project__img2.jpg" alt="" target="_blank"></div>
               <div class="course-project__title">Монгольерфкин</div>
-              <div class="course-project__subtitle">Посадочная страница</div><a class="course-project__button">Смотреть работу</a>
-            </div>
+              <div class="course-project__subtitle">Посадочная страница</div><a class="course-project__button">Смотреть работу</a> </div>
           </div>
         </div>
       </div>
@@ -137,4 +156,5 @@
       </div>
     </div>
   </body>
+
 </html>

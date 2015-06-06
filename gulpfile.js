@@ -52,7 +52,7 @@ gulp.task('server', function() {
 
 // jade компилятор
 gulp.task('jade', function() {
-  return gulp.src('./index.jade')
+  return gulp.src('./*.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
@@ -73,7 +73,7 @@ gulp.task('less', function() {
       errLogToConsole: true
     }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 8', 'ie 9'],
+      browsers: ['last 15 versions', 'ie 8', 'ie 9'],
       cascade: false
     }))
     .pipe(gulp.dest('./css'))
