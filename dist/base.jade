@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  :verbatim
+  include ./jade/head.jade
+  body
+    :verbatim
+    include ./blocks/header/header.jade
+
+    //- блок промо
+
+    include ./blocks/course-promo/course-promo.jade 
+
+    //- блок что внутри
+
+    include ./blocks/course-inside/course-inside.jade 
+
+    //- детали курса
+    
+    include ./blocks/details/details.jade
+    
+    //- подвальчик
+
+    include ./blocks/footer/footer.jade

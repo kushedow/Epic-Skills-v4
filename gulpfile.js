@@ -36,9 +36,12 @@ var autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'),
     less = require('gulp-less'),
     gutil = require('gulp-util'),
+    gulpif = require('gulp-if'),
     ftp = require('vinyl-ftp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
+    clean = require('gulp-rimraf'),
+    useref = require('gulp-useref'),
     plumber = require('gulp-plumber');
 
 // локальный сервер
@@ -52,7 +55,7 @@ gulp.task('server', function() {
 
 // jade компилятор
 gulp.task('jade', function() {
-  return gulp.src('./index.jade')
+  return gulp.src('./*.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
@@ -94,3 +97,105 @@ gulp.task('watch', function () {
 // default task
 gulp.task('default', ['server', 'watch']);
 
+
+// ================================
+// ============= DIST =============
+// ================================
+
+// Build
+var path = {
+  build: {
+    blocks: './dist/blocks/',
+    html: './dist/',
+    jade: './dist/jade/',
+    css: './dist/css/',
+    less: './dist/less/',
+    img: './img',
+    js: './js/'
+  },
+  src: {
+    blocks: './blocks/**/*.*',
+    html: ['./*.jade', './*.html'],
+    jade: './jade/*.jade',
+    css: './css/*.css',
+    less: './less/*.less',
+    img: './img/*.*',
+    js: './js/*.*'
+  },
+  clean: './dist'
+};
+
+// build cleaner
+gulp.task('clean', function () {
+  return gulp.src('./dist', {read: false})
+    .pipe(clean());
+});
+
+gulp.task('html:build', function () {
+  var assets = useref.assets();
+  return gulp.src(path.src.html)
+    .pipe(assets)
+    .pipe(assets.restore())
+    .pipe(useref())
+    .pipe(gulp.dest(path.build.html));
+});
+
+gulp.task('css:build', function () {
+  gulp.src(path.src.css)
+    .pipe(gulp.dest(path.build.css));
+});
+
+gulp.task('blocks:build', function () {
+  gulp.src(path.src.blocks)
+    .pipe(gulp.dest(path.build.blocks));
+});
+
+gulp.task('less:build', function () {
+  gulp.src(path.src.less)
+    .pipe(gulp.dest(path.build.less));
+});
+
+gulp.task('js:build', function () {
+  gulp.src(path.src.js)
+    .pipe(gulp.dest(path.build.js));
+});
+
+gulp.task('jade:build', function () {
+  gulp.src(path.src.jade)
+    .pipe(gulp.dest(path.build.jade));
+});
+
+gulp.task('img:build', function () {
+  gulp.src(path.src.img)
+    .pipe(gulp.dest(path.build.img));
+});
+
+gulp.task('dist', ['html:build','js:build', 'css:build', 'less:build', 'jade:build', 'blocks:build', 'img:build']);
+
+gulp.task('build', ['clean', 'jade'], function () {
+  gulp.start('dist');
+});
+
+
+// ================================
+// ============ DEPLOY ============
+// ================================
+
+gulp.task( 'deploy', function() {
+
+  var conn = ftp.create( {
+      host: 'a.epixx.ru',
+      user: 'epic_assets',
+      password: '1TGHryqndKUXNtxnWO0u8JcpTVVS29',
+      parallel: 10,
+      port: 21,
+      log: gutil.log
+  } );
+
+  var globs = [
+      'dist/**/*'
+  ];
+
+  return gulp.src(globs, { base: 'dist/', buffer: false })
+    .pipe(conn.dest( 'public_html/v4/'));
+});
