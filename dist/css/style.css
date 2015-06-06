@@ -222,8 +222,8 @@ div[class*=" flaticon-"]:after {
   display: inline-block;
   vertical-align: top;
   width: 28%;
-  margin-right: 2%;
-  text-align: center;
+  margin-right: 5%;
+  text-align: right;
 }
 .course-text__title {
   font-size: 18px;
@@ -293,8 +293,16 @@ div[class*=" flaticon-"]:after {
     padding: 0;
   }
   .course-promo__button {
-    padding: 5px 30px;
+    padding: 5px 30px 5px 70px;
     font-size: 16px;
+  }
+  .course-promo__info {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .course-promo__info {
+    display: none;
   }
 }
 .course-inside {
@@ -639,6 +647,9 @@ div[class*=" flaticon-"]:after {
   .programm-day .row {
     margin: 0;
   }
+  .programm-info__lesson--teacher-load {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .programm-info__teacher {
@@ -675,6 +686,9 @@ div[class*=" flaticon-"]:after {
   }
   .programm-info__lesson-title {
     padding-left: 15px;
+  }
+  .programm-info__lesson--teacher-load {
+    display: none;
   }
 }
 .team {
