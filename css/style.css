@@ -277,8 +277,8 @@ div[class*=" flaticon-"]:after {
   display: inline-block;
   vertical-align: top;
   width: 28%;
-  margin-right: 2%;
-  text-align: center;
+  margin-right: 5%;
+  text-align: right;
 }
 .course-text__title {
   font-size: 18px;
@@ -349,8 +349,16 @@ div[class*=" flaticon-"]:after {
     padding: 0;
   }
   .course-promo__button {
-    padding: 5px 30px;
+    padding: 5px 70px 5px 30px;
     font-size: 16px;
+  }
+  .course-promo__info {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .course-promo__info {
+    display: none;
   }
 }
 .course-inside {
@@ -649,6 +657,30 @@ div[class*=" flaticon-"]:after {
   height: 2px;
   background-color: #d73030;
 }
+.programm-info__lesson--teacher-load {
+  background-color: #ffffff;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 15px;
+  float: right;
+  padding: 12px;
+  display: inline-block;
+  border: 2px solid #f2b658;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  top: 27px;
+}
+.programm-info__lesson--teacher-load:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 12px;
+  height: 16px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../blocks/program/teacher-load__arrow-down.png);
+}
 .programm-teacher {
   width: 100%;
   -webkit-border-radius: 3px;
@@ -672,6 +704,9 @@ div[class*=" flaticon-"]:after {
   }
   .programm-day .row {
     margin: 0;
+  }
+  .programm-info__lesson--teacher-load {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -709,6 +744,9 @@ div[class*=" flaticon-"]:after {
   }
   .programm-info__lesson-title {
     padding-left: 15px;
+  }
+  .programm-info__lesson--teacher-load {
+    display: none;
   }
 }
 .team {
