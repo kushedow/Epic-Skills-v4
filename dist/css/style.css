@@ -558,6 +558,26 @@ div[class*=" flaticon-"]:after {
 .why-here-item__img img {
   width: 100%;
 }
+.in-touch {
+  background-color: #f7f7f7;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+.in-touch__img img {
+  max-width: 100%;
+}
+.in-touch__heading {
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.in-touch__text {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
 .details-anchor {
   position: relative;
   top: -43px;
