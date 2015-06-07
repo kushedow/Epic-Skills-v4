@@ -1,5 +1,7 @@
 @import "footer--phone.less";
 @import "footer--tablet.less";
+@import "less/mixin.less";
+@import "less/variables.less";
 
 .footer {
   color: white;
@@ -7,23 +9,20 @@
   min-height: 350px;
 
   &__header {
-    height: 112px;
-    line-height: 112px;
+    height: 110px;
+    line-height: 110px;
   }
 
   &__logo {
     float: left;
     font-size: 24px;
-    margin-right: 90px;
+    margin-right: 86px;
     position: relative;
 
     &:after {
       content: "";
       position: absolute;
-      right: -58px;
-      height: 112px;
-      width: 23px;
-      background: url('../blocks/footer/footer__triple-slash.png') center center no-repeat;
+      .footer__sprite-icon(-287px, -5px, 23px, 110px, 138px);
     }
   }
 
@@ -36,12 +35,13 @@
   }
 
   &__article {
-    border: 3px solid #dedede;
+    border: 3px solid @gray;
     padding: 25px 30px;
     box-sizing: border-box;
 
     p {
       margin-bottom: 30px;
+      font-size: 18px;
     }
   }
 }
@@ -51,28 +51,30 @@
 
   ul {
     list-style: none;
-  }
 
-  li {
-    float: left;
-    margin-right: 15px;
-  }
+    li {
+      float: left;
+      margin-right: 17px;
+      padding-top: 3px;
 
-  a {
-    color: white;
-    font-size: 18px;
+      a {
+        color: white;
+        font-size: 18px;
 
-    &:hover {
-      opacity: 0.8;
-      transition: opacity .25s ease-in-out;
-      text-decoration: none;
+        &:hover {
+          opacity: 0.8;
+          transition: @transition-default;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
 
 .footer__btn {
-  border: 1px solid white;
-  border-radius: 2px;
+  border: 1px solid @gray;
+  color: white;
+  border-radius: 3px;
   padding: 14px 20px;
   background: none;
   font-size: 18px;
@@ -84,7 +86,7 @@
 
   &:hover {
     opacity: 0.7;
-    transition: opacity .25s ease-in-out;
+    transition: @transition-default;
   }
 
   &--small {
@@ -94,16 +96,19 @@
 
     &:hover {
       opacity: 0.7;
-      transition: opacity .25s ease-in-out;
+      transition: @transition-default;
     }
   }
 }
 
 .footer__sidebar {
+  padding: 0 0 0 30px;
+
   &__title {
     display: block;
     font-size: 24px;
-    margin-bottom: 20px;
+    line-height: 20px;
+    margin-bottom: 26px;
   }
 
   span {
@@ -115,14 +120,58 @@
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 30px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      .footer__sprite-icon(-50px, -50px, 17px, 25px, 3px, 1px);
+    }
   }
 
   &__tel {
     padding-left: 35px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      .footer__sprite-icon(-167px, -50px, 20px, 20px, 3px, 1px);
+    }
 
     span {
-      padding-right: 30px;
+      padding-right: 26px;
+      font-size: 18px;
       display: inline;
+    }
+  }
+
+  &__social-icons {
+    margin-bottom: 30px;
+
+    &--vkontakte {.footer__sprite-icon(-776px, -50px, 22px, 23px);}
+    &--facebook {.footer__sprite-icon(-410px, -50px, 22px, 23px);}
+    &--instagram {.footer__sprite-icon(-532px, -50px, 22px, 23px);}
+    &--twitter {.footer__sprite-icon(-654px, -50px, 22px, 23px);}
+
+    li {
+      display: inline-block;
+      text-indent: -9999px;
+      margin-right: 14px;
+
+      &:last-child {margin:0;}
+
+      a {
+        display: block;
+
+        &:hover {
+          opacity: 0.7;
+          transition: @transition-default;
+        }
+      }
     }
   }
 
@@ -135,12 +184,13 @@
       &:hover {
         text-decoration: none;
         opacity: 0.7;
-        transition: opacity .25s ease-in-out;
+        transition: @transition-default;
       }
 
       span {
-        display: inline;
-        border-bottom: 1px solid white;
+        display: inline-block;
+        border-bottom: 1px solid @gray;
+        height: 18px;
       }
     }
   }

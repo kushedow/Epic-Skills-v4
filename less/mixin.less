@@ -6,7 +6,7 @@
 	& when (@size = l) { font-size: 20px; padding: 10px 15px; }
 
 	& when (@type =normal) { background-color: @c; color: #fff;}
-	& when (@type =outline) { background-color: transparent; color: @c; border: @border solid @c;}	
+	& when (@type =outline) { background-color: transparent; color: @c; border: @border solid @c;}
 
 	&:hover when (@type = normal){ text-decoration: none; background-color: @c+(-35%); color: #fff;}
 
@@ -23,7 +23,7 @@
 .button--shadowed(@size,@color){
 
 	box-shadow: 0 5 0 @size @color;
-	
+
 }
 
 .container {
@@ -43,7 +43,7 @@
 		display: block;
 		position: absolute;
 		width: 0;
-	    height: 0;
+			height: 0;
 		left: -44px;
 		top: 0;
 		border-bottom: 50px solid @white;
@@ -54,7 +54,7 @@
 		display: block;
 		position: absolute;
 		width: 0;
-	    height: 0;
+			height: 0;
 		right: -44px;
 		top: 0;
 		border-bottom: 50px solid @white;
@@ -101,6 +101,14 @@
 	border-radius: 3px;
 }
 
-
+.footer__sprite-icon(@x: 0, @y: 0, @width: 0, @height: 0, @left: 0, @top: 0,...) {
+	background-image: url('../img/footer-spritesheet.png');
+	background-repeat: no-repeat;
+	background-position: @x @y;
+	width: @width;
+	height: @height;
+	left: @left;
+	top: @top;
+}
 
 
