@@ -603,6 +603,64 @@ div[class*=" flaticon-"]:after {
   margin-bottom: 15px;
   font-weight: normal;
 }
+.course-conclusion {
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+.course-conclusion__heading {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+.course-conclusion__text {
+  margin-bottom: 15px;
+}
+.course-conclusion__button {
+  background-color: #74bb19;
+  color: #ffffff;
+  padding: 10px 100px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.course-conclusion__button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  color: #ffffff;
+}
+.course-conclusion__button:acive {
+  text-decoration: none;
+  color: #ffffff;
+}
+.course-conclusion__button:focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+.course-conclusion__button__img img {
+  max-width: 100%;
+}
+.course-conclusion-list {
+  margin-bottom: 40px;
+}
+.course-conclusion-list li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  list-style: none;
+  padding-left: 30px;
+  position: relative;
+}
+.course-conclusion-list li:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 15px;
+  height: 2px;
+  background-color: #d73030;
+}
 .details-anchor {
   position: relative;
   top: -43px;
