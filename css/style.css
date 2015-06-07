@@ -484,6 +484,7 @@ div[class*=" flaticon-"]:after {
 .course-api__column-left .api-info__item {
   text-align: right;
   background-position: 99% 50%;
+  padding-right: 35px;
 }
 .course-api__column-right {
   margin-top: 50px;
@@ -500,10 +501,44 @@ div[class*=" flaticon-"]:after {
   font-size: 22px;
   display: inline-block;
   color: #ffffff;
-  padding: 0 35px;
   margin-bottom: 20px;
   background-image: url(../blocks/course-api/course-api__icon-plus.png);
   background-repeat: no-repeat;
+}
+.why-here {
+  padding: 60px 0 70px 0;
+}
+.why-here__heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.why-here__subheading {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 50px;
+}
+.why-here-item {
+  margin-bottom: 40px;
+}
+.why-here-item__title {
+  font-size: 22px;
+  line-height: 27px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+.why-here-item__subtitle {
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: 70px;
+}
+.why-here-item__img {
+  float: left;
+  width: 55px;
+  margin-right: 25px;
+}
+.why-here-item__img img {
+  width: 100%;
 }
 .details-anchor {
   position: relative;

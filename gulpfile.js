@@ -185,8 +185,8 @@ gulp.task( 'deploy', function() {
 
   var conn = ftp.create( {
       host: 'a.epixx.ru',
-      user: '',
-      password: '',
+      user: 'epic_assets',
+      password: '1TGHryqndKUXNtxnWO0u8JcpTVVS29',
       parallel: 10,
       port: 21,
       log: gutil.log
