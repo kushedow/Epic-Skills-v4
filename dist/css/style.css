@@ -130,7 +130,7 @@
 /*	    	     Начало стилей проекта		 	*/
 /* ////////////////////////////////////////////////////// */
 body {
-  font-family: Arial;
+  font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   color: #444;
 }
@@ -145,6 +145,57 @@ ul,
 li {
   margin: 0;
   padding: 0px;
+}
+.header {
+  background: #171f2c;
+}
+.site-logo {
+  float: left;
+  line-height: 56px;
+  height: 56px;
+}
+.site-logo:hover {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+}
+.site-logo__link {
+  display: block;
+}
+.site-logo__link > div {
+  display: inline-block;
+}
+.site-logo__image {
+  width: 30px;
+  margin-right: 15px;
+  margin-bottom: 2px;
+}
+.site-logo__name {
+  height: 20px;
+}
+.main-nav {
+  float: right;
+}
+.main-nav ul {
+  line-height: 56px;
+  height: 56px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.main-nav li:first-child {
+  margin-left: 0;
+}
+.main-nav li a {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 16px;
+}
+.main-nav li a:hover,
+.main-nav li a:focus {
+  color: #ff2900;
+  text-decoration: none;
+  transition: 400ms color, 400ms background-color;
 }
 /* promo/promo.less */
 @font-face {
@@ -406,6 +457,53 @@ div[class*=" flaticon-"]:after {
 .course-project__button:focus {
   text-decoration: none;
   color: #ffffff;
+}
+.course-api {
+  background-color: #363847;
+  padding-top: 65px;
+}
+.course-api__heading {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.course-api__subheading {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 50px;
+}
+.course-api__img img {
+  width: 100%;
+}
+.course-api__column-left {
+  text-align: right;
+  margin-top: 50px;
+}
+.course-api__column-left .api-info__item {
+  text-align: right;
+  background-position: 99% 50%;
+}
+.course-api__column-right {
+  margin-top: 50px;
+}
+.course-api__column-right .api-info__item {
+  padding-left: 35px;
+  background-position: 1% 50%;
+}
+.course-api__img--books {
+  text-align: center;
+  margin-bottom: 65px;
+}
+.api-info__item {
+  font-size: 22px;
+  display: inline-block;
+  color: #ffffff;
+  padding: 0 35px;
+  margin-bottom: 20px;
+  background-image: url(../blocks/course-api/course-api__icon-plus.png);
+  background-repeat: no-repeat;
 }
 .details-anchor {
   position: relative;
@@ -1056,4 +1154,122 @@ div[class*=" flaticon-"]:after {
   footer .container {
     width: 720px;
   }
+}
+.footer {
+  color: white;
+  background: url('../blocks/footer/footer__bg--1920.jpg') center top;
+  min-height: 350px;
+}
+.footer__header {
+  height: 112px;
+  line-height: 112px;
+}
+.footer__logo {
+  float: left;
+  font-size: 24px;
+  margin-right: 90px;
+  position: relative;
+}
+.footer__logo:after {
+  content: "";
+  position: absolute;
+  right: -58px;
+  height: 112px;
+  width: 23px;
+  background: url('../blocks/footer/footer__triple-slash.png') center center no-repeat;
+}
+.footer__content {
+  margin-bottom: 50px;
+}
+.footer__content.row {
+  margin: 0 3px 50px 3px;
+}
+.footer__article {
+  border: 3px solid #dedede;
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+.footer__article p {
+  margin-bottom: 30px;
+}
+.footer__nav {
+  float: left;
+}
+.footer__nav ul {
+  list-style: none;
+}
+.footer__nav li {
+  float: left;
+  margin-right: 15px;
+}
+.footer__nav a {
+  color: white;
+  font-size: 18px;
+}
+.footer__nav a:hover {
+  opacity: 0.8;
+  transition: opacity 0.25s ease-in-out;
+  text-decoration: none;
+}
+.footer__btn {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 14px 20px;
+  background: none;
+  font-size: 18px;
+  line-height: 16px;
+  outline: none;
+  margin-right: 20px;
+}
+.footer__btn:last-child {
+  margin: 0;
+}
+.footer__btn:hover {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+}
+.footer__btn--small {
+  padding: 8px;
+  font-size: 15px;
+  line-height: 10px;
+}
+.footer__btn--small:hover {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+}
+.footer__sidebar__title {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.footer__sidebar span {
+  display: block;
+}
+.footer__sidebar__adress {
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.footer__sidebar__tel {
+  padding-left: 35px;
+}
+.footer__sidebar__tel span {
+  padding-right: 30px;
+  display: inline;
+}
+.footer__sidebar__info {
+  font-size: 15px;
+}
+.footer__sidebar__info a {
+  color: white;
+}
+.footer__sidebar__info a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+}
+.footer__sidebar__info a span {
+  display: inline;
+  border-bottom: 1px solid white;
 }

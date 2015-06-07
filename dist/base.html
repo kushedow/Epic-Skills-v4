@@ -6,10 +6,29 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
 
   <body>
+    <!-- пункты меню навигации-->
     <!-- стандартная шапочка сайта-->
+    <header class="header">
+      <div class="container">
+        <div class="site-logo">
+          <a href="#" class="site-logo__link"><img src="../blocks/header/site-logo__image.svg" class="site-logo__image"><img src="../blocks/header/site-logo__name.svg" class="site-logo__name"></a>
+        </div>
+        <!-- выпадашка-->
+        <!-- навигация-->
+        <nav class="main-nav hidden-xs">
+          <ul>
+            <li><a href="#">Кто мы</a></li>
+            <li><a href="#">Ближайшие курсы</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Журнал</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- Промо-блок курса-->
     <div class="course-promo text-center">
       <h1 class="course-promo__heading"> LEVEL UP для веб-дизайнера,<br>который хочет подрасти </h1>
@@ -82,62 +101,65 @@
         </div>
       </div>
     </div>
-    <div id="details" class="details-anchor"></div>
-    <div class="details">
+    <div class="course-api">
       <div class="container">
-        <h2 class="details__heading text-center">Что внутри курса?</h2>
-        <div class="row details-info">
-          <div class="col-sm-2 col-xs-12"><img src="blocks/details/course-promo__icon--creativity.png" class="details-info__img">
-            <p class="details-info__text">Креативные техники</p>
+        <div class="course-api__heading text-center">Лучше, чем десяток устаревших книжек</div>
+        <div class="course-api__subheading text-center">Интерактивная система с заданиями, которые проверяют сами себя, алгоритмами и теорией к каждому заданию</div>
+        <div class="row course-api__wrap">
+          <div class="col-xs-4 course-api__column-left">
+            <div class="api-info__item">Выполнение PHP в песочнице</div>
+            <div class="api-info__item">Мгновенная автопроверка</div>
           </div>
-          <div class="col-xs-2"> <img src="blocks/details/course-promo__icon--write.png" class="details-info__img">
-            <p class="details-info__text">Микрокопирайтинг и работа с контентом</p>
-          </div>
-          <div class="col-xs-2"> <img src="blocks/details/course-promo__icon--photo.png" class="details-info__img">
-            <p class="details-info__text">Обработка и ретушь фотографий</p>
-          </div>
-          <div class="col-xs-2"> <img src="blocks/details/course-promo__icon--animations.png" class="details-info__img">
-            <p class="details-info__text">Анимации в After Effects</p>
-          </div>
-          <div class="col-xs-2"> <img src="blocks/details/course-promo__icon--create.png" class="details-info__img">
-            <p class="details-info__text">Создание иконок и Adobe Illustrator</p>
-          </div>
-          <div class="col-xs-2"> <img src="blocks/details/course-promo__icon--adaptive.png" class="details-info__img">
-            <p class="details-info__text">Адаптивный дизайн</p>
+          <div class="col-xs-4 course-api__img"><img src="blocks/course-api/course-api__img.png" alt=""></div>
+          <div class="col-xs-4 course-api__column-right">
+            <div class="api-info__item">200 заданий по верстке</div>
+            <div class="api-info__item">Пожизненный доступ</div>
           </div>
         </div>
-        <div class="line-mobile"></div>
-        <div class="row details-list">
-          <div class="col-sm-4 col-xs-12 details-list__column">
-            <h3 class="details-list__heading">Как проходит обучение</h3>
-            <ul>
-              <li class="details-list__list-item">Никакой скучной теории</li>
-              <li class="details-list__list-item">Обратная связь</li>
-              <li class="details-list__list-item">Ничего не забудется</li>
-              <li class="details-list__list-item">Можно прийти снова</li>
-            </ul>
-          </div>
-          <div class="col-sm-4 col-xs-12 details-list__column">
-            <h3 class="details-list__heading">Для кого этот курс</h3>
-            <ul>
-              <li class="details-list__list-item">Для тех, кто хочет в студию</li>
-              <li class="details-list__list-item">Кому не хватает системы в дизайне</li>
-              <li class="details-list__list-item">У кого творческий кризис</li>
-              <li class="details-list__list-item">Кто хочет зарабатывать больше</li>
-            </ul>
-          </div>
-          <div class="col-sm-4 col-xs-12 details-list__column">
-            <h3 class="details-list__heading">Что вы получите</h3>
-            <ul>
-              <li class="details-list__list-item">Модные навыки</li>
-              <li class="details-list__list-item">Личного наставника</li>
-              <li class="details-list__list-item">Ревью портфолио</li>
-              <li class="details-list__list-item">Неформальные беседы с профи</li>
-            </ul>
-          </div>
+        <div class="row course-api__wrap">
+          <div class="col-xs-12 course-api__img--books"><img src="blocks/course-api/course-api__img--books.png" alt=""></div>
         </div>
       </div>
     </div>
+    <!-- пункты меню навигации-->
+    <footer class="footer">
+      <div class="container">
+        <header class="footer__header">
+          <div class="footer__logo">Epic Skills</div>
+          <nav class="footer__nav">
+            <ul>
+              <li><a href="#">Курсы</a></li>
+              <li><a href="#">Журнал</a></li>
+              <li><a href="#">Компаниям</a></li>
+              <li><a href="#">Блог</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="footer__content row">
+          <div class="footer__article col-xs-8">
+            <p>Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.</p>
+            <p>Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.</p>
+            <button class="footer__btn">Почитать про школу</button>
+            <button class="footer__btn">Выбрать курс</button>
+          </div>
+          <aside class="footer__sidebar col-xs-4"><span class="footer__sidebar__title">Контакты</span>
+            <div class="footer__sidebar__adress"><span>Наш офис: Чкаловский проспект, 15</span><span>Время работы: 12:00 - 23:00</span></div>
+            <div class="footer__sidebar__tel"><span>8 (911) 232 22 32</span>
+              <button class="footer__btn footer__btn--small">Позвоните мне!</button>
+            </div>
+            <div class="footer__icons">
+              <ul>
+                <li><a>vk</a></li>
+                <li><a>fb</a></li>
+                <li><a>tw</a></li>
+                <li><a>in</a></li>
+              </ul>
+            </div>
+            <div class="footer__sidebar__info"><span>ООО "МедиаСемантика"</span><a href="#" class="footer__modal-link"><span>Юридическая информация</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </footer>
   </body>
 
 </html>

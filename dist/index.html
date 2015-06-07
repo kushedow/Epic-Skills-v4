@@ -6,10 +6,29 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> </head>
 
   <body>
+    <!-- пункты меню навигации-->
     <!-- стандартная шапочка сайта-->
+    <header class="header">
+      <div class="container">
+        <div class="site-logo">
+          <a href="#" class="site-logo__link"><img src="../blocks/header/site-logo__image.svg" class="site-logo__image"><img src="../blocks/header/site-logo__name.svg" class="site-logo__name"></a>
+        </div>
+        <!-- выпадашка-->
+        <!-- навигация-->
+        <nav class="main-nav hidden-xs">
+          <ul>
+            <li><a href="#">Кто мы</a></li>
+            <li><a href="#">Ближайшие курсы</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Журнал</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <!-- Промо-блок курса-->
     <div class="course-promo text-center">
       <h1 class="course-promo__heading"> LEVEL UP для веб-дизайнера,<br>который хочет подрасти </h1>
@@ -401,6 +420,45 @@
         </div>
       </div>
     </div>
+    <!-- пункты меню навигации-->
+    <footer class="footer">
+      <div class="container">
+        <header class="footer__header">
+          <div class="footer__logo">Epic Skills</div>
+          <nav class="footer__nav">
+            <ul>
+              <li><a href="#">Курсы</a></li>
+              <li><a href="#">Журнал</a></li>
+              <li><a href="#">Компаниям</a></li>
+              <li><a href="#">Блог</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="footer__content row">
+          <div class="footer__article col-xs-8">
+            <p>Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.</p>
+            <p>Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.</p>
+            <button class="footer__btn">Почитать про школу</button>
+            <button class="footer__btn">Выбрать курс</button>
+          </div>
+          <aside class="footer__sidebar col-xs-4"><span class="footer__sidebar__title">Контакты</span>
+            <div class="footer__sidebar__adress"><span>Наш офис: Чкаловский проспект, 15</span><span>Время работы: 12:00 - 23:00</span></div>
+            <div class="footer__sidebar__tel"><span>8 (911) 232 22 32</span>
+              <button class="footer__btn footer__btn--small">Позвоните мне!</button>
+            </div>
+            <div class="footer__icons">
+              <ul>
+                <li><a>vk</a></li>
+                <li><a>fb</a></li>
+                <li><a>tw</a></li>
+                <li><a>in</a></li>
+              </ul>
+            </div>
+            <div class="footer__sidebar__info"><span>ООО "МедиаСемантика"</span><a href="#" class="footer__modal-link"><span>Юридическая информация</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </footer>
   </body>
 
 </html>

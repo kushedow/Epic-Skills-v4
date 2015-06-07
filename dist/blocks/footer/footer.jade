@@ -1,0 +1,49 @@
+// пункты меню навигации
+- var footerNav = ['Курсы','Журнал', 'Компаниям', 'Блог']
+
+footer.footer
+  .container
+    header.footer__header
+      .footer__logo Epic Skills
+      nav.footer__nav
+        ul
+          each item in footerNav
+            li
+              a(href='#')= item
+    .footer__content.row
+      .footer__article.col-xs-8
+        p
+          | Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.
+        p
+          | Единственные курсы Веб-дизайна в Санкт-Петербурге, в которых собраны проектирование, прототипирование, обучение программам Axure и Adobe Photoshop, решение кейсов и возможность создать портфолио в процессе обучения. Вы научитесь делать невозможное.
+
+        button.footer__btn Почитать про школу
+        button.footer__btn Выбрать курс
+
+      aside.footer__sidebar.col-xs-4
+        span.footer__sidebar__title Контакты
+
+        .footer__sidebar__adress
+          span Наш офис: Чкаловский проспект, 15
+          span Время работы: 12:00 - 23:00
+
+        .footer__sidebar__tel
+          span 8 (911) 232 22 32
+          button.footer__btn.footer__btn--small
+            | Позвоните мне!
+
+        .footer__icons
+          ul
+            li
+              a vk
+            li
+              a fb
+            li
+              a tw
+            li
+              a in
+
+        .footer__sidebar__info
+          span ООО "МедиаСемантика"
+          a.footer__modal-link(href="#")
+            span Юридическая информация
