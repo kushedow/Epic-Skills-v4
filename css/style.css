@@ -513,24 +513,37 @@ div[class*=" flaticon-"]:after {
   font-weight: bold;
   margin-bottom: 15px;
 }
+.why-here__heading span {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+}
 .why-here__subheading {
   font-size: 18px;
   line-height: 23px;
   margin-bottom: 50px;
+}
+.why-here__subheading span {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 50px;
+  display: block;
 }
 .why-here-item {
   margin-bottom: 40px;
 }
 .why-here-item__title {
   font-size: 22px;
+  font-weight: bold;
   line-height: 27px;
-  margin-left: 70px;
+  margin-left: 80px;
   margin-bottom: 10px;
 }
 .why-here-item__subtitle {
   font-size: 18px;
   line-height: 23px;
-  margin-left: 70px;
+  margin-left: 80px;
 }
 .why-here-item__img {
   float: left;
