@@ -661,6 +661,16 @@ div[class*=" flaticon-"]:after {
   height: 2px;
   background-color: #d73030;
 }
+.course-conclusion-list li:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 15px;
+  height: 2px;
+  background-color: #d73030;
+}
 .details-anchor {
   position: relative;
   top: -43px;
@@ -1522,10 +1532,10 @@ div[class*=" flaticon-"]:after {
   position: absolute;
   background-image: url('../img/footer-spritesheet.png');
   background-repeat: no-repeat;
-  background-position: -287px, -5px, 23px, 110px, 138px 0;
-  width: 0;
-  height: 0;
-  left: 0;
+  background-position: -287px -5px;
+  width: 23px;
+  height: 110px;
+  left: 138px;
   top: 0;
 }
 .footer__content {
@@ -1551,16 +1561,16 @@ div[class*=" flaticon-"]:after {
 .footer__nav ul {
   list-style: none;
 }
-.footer__nav li {
+.footer__nav ul li {
   float: left;
   margin-right: 17px;
   padding-top: 3px;
 }
-.footer__nav a {
+.footer__nav ul li a {
   color: white;
   font-size: 18px;
 }
-.footer__nav a:hover {
+.footer__nav ul li a:hover {
   opacity: 0.8;
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
