@@ -110,8 +110,8 @@ var path = {
     jade: './dist/jade/',
     css: './dist/css/',
     less: './dist/less/',
-    img: './img',
-    js: './js/'
+    img: './dist/img/',
+    js: './dist/js/'
   },
   src: {
     blocks: './blocks/**/*.*',
@@ -186,7 +186,7 @@ gulp.task( 'deploy', function() {
   var conn = ftp.create( {
       host: 'a.epixx.ru',
       user: 'epic_assets',
-      password: '1TGHryqndKUXNtxnWO0u8JcpTVVS29',
+      password: '',
       parallel: 10,
       port: 21,
       log: gutil.log
