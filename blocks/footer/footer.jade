@@ -1,5 +1,5 @@
 // пункты меню навигации
-- var footerNav = ['Курсы','Журнал', 'Компаниям', 'Блог']
+- var footerNav = {'Курсы': 'base.html','Журнал': 'index.html', 'Компаниям': 'index2.html', 'Блог': 'index3.html'}
 
 footer.footer
   .container
@@ -7,9 +7,8 @@ footer.footer
       .footer__logo Epic Skills
       nav.footer__nav
         ul
-          each item in footerNav
-            li
-              a(href='#')= item
+          each linkPath, linkName in footerNav
+            li: a(href= linkPath) #{linkName}
     .footer__content.row
       .footer__article.col-xs-8
         p
