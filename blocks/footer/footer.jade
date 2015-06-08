@@ -13,13 +13,11 @@ footer.footer
           each linkPath, linkName in footerNav
             li: a(href= linkPath) #{linkName}
 
-    .footer__content.row
-      .footer__article.col-xs-8
+    .footer__content
+      .footer__article
         p
           | Пожалуй, самый увлекательный способ получить навыки создания сайтов
-          br
           |в Санкт-Петербурге. У нас можно получить level-up и открыть в себе способности
-          br
           |веб-дизайнера, верстальщика или веб-программиста, собрать портфолио, пройти стажировку и найти работу.
         p
           | Мы сокращаем время обучения за счет свежих технологий, ярких заданий и непередаваемой атмосферы. Давайте знакомиться :)
@@ -27,7 +25,7 @@ footer.footer
         button.footer__btn Почитать про школу
         button.footer__btn Выбрать курс
 
-      aside.footer__sidebar.col-xs-4
+      aside.footer__sidebar
         span.footer__sidebar__title Контакты
 
         .footer__sidebar__adress

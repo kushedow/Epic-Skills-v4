@@ -13,6 +13,31 @@
     line-height: 110px;
   }
 
+  &__nav {
+    float: left;
+
+    ul {
+      list-style: none;
+
+      li {
+        float: left;
+        margin-right: 17px;
+        padding-top: 3px;
+
+        a {
+          color: white;
+          font-size: 18px;
+
+          &:hover {
+            opacity: 0.8;
+            transition: @transition-default;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
   &__logo {
     float: left;
     font-size: 24px;
@@ -28,6 +53,8 @@
 
   &__content {
     margin-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
 
     &.row {
       margin: 0 3px 50px 3px;
@@ -36,7 +63,12 @@
 
   &__article {
     border: 3px solid @gray;
-    padding: 25px 30px;
+    padding: 25px 30px 5px 30px;
+    min-width: 280px;
+    max-width: 720px;
+    width: 64%;
+    float: left;
+    margin-bottom: 40px;
     box-sizing: border-box;
 
     p {
@@ -44,65 +76,16 @@
       font-size: 18px;
     }
   }
+
+  &__btn { margin-bottom: 20px; }
 }
 
-.footer__nav {
-  float: left;
-
-  ul {
-    list-style: none;
-
-    li {
-      float: left;
-      margin-right: 17px;
-      padding-top: 3px;
-
-      a {
-        color: white;
-        font-size: 18px;
-
-        &:hover {
-          opacity: 0.8;
-          transition: @transition-default;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-
-.footer__btn {
-  border: 1px solid @gray;
-  color: white;
-  border-radius: 3px;
-  padding: 14px 20px;
-  background: none;
-  font-size: 18px;
-  line-height: 16px;
-  outline: none;
-  margin-right: 20px;
-
-  &:last-child {margin: 0;}
-
-  &:hover {
-    opacity: 0.7;
-    transition: @transition-default;
-  }
-
-  &--small {
-    padding: 8px;
-    font-size: 15px;
-    line-height: 10px;
-
-    &:hover {
-      opacity: 0.7;
-      transition: @transition-default;
-    }
-  }
-}
 
 .footer__sidebar {
   padding: 0 0 0 30px;
+  width: 36%;
+  min-width: 320px;
+  float: left;
 
   &__title {
     display: block;
@@ -145,7 +128,8 @@
     span {
       padding-right: 26px;
       font-size: 18px;
-      display: inline;
+      display: inline-block;
+      margin-bottom: 20px;
     }
   }
 
@@ -192,6 +176,37 @@
         border-bottom: 1px solid @gray;
         height: 18px;
       }
+    }
+  }
+}
+
+.footer__btn {
+  border: 1px solid @gray;
+  color: white;
+  border-radius: 3px;
+  padding: 14px 20px;
+  background: none;
+  font-size: 18px;
+  line-height: 16px;
+  outline: none;
+  margin-right: 20px;
+
+  &:last-child {margin-right: 0;}
+
+  &:hover {
+    opacity: 0.7;
+    transition: @transition-default;
+  }
+
+  &--small {
+    padding: 8px;
+    font-size: 15px;
+    line-height: 10px;
+    width: default;
+
+    &:hover {
+      opacity: 0.7;
+      transition: @transition-default;
     }
   }
 }
