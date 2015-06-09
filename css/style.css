@@ -1425,7 +1425,7 @@ div[class*=" flaticon-"]:after {
   footer .footer__nav {
     display: none;
   }
-  footer .hidden-panda {
+  footer #hidden-panda {
     display: block !important;
     float: right;
   }
@@ -1569,6 +1569,46 @@ div[class*=" flaticon-"]:after {
   height: 110px;
   line-height: 110px;
 }
+.footer__menu--opened {
+  height: inherit;
+  line-height: inherit;
+}
+.footer__menu--opened .footer__logo {
+  height: 110px;
+  line-height: 110px;
+}
+.footer__menu--opened .footer__nav {
+  float: none;
+  clear: both;
+  margin-bottom: 20px;
+}
+.footer__menu--opened .footer__nav ul {
+  border: 1px solid #dedede;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.footer__menu--opened .footer__nav ul li {
+  margin: 0;
+  padding: 0;
+  float: none;
+  -webkit-box-shadow: inset 0 0 1px 0 #dedede;
+  box-shadow: inset 0 0 1px 0 #dedede;
+}
+.footer__menu--opened .footer__nav ul li a {
+  display: block;
+  padding: 20px;
+  color: #dedede;
+}
+.footer__menu--opened .footer__nav ul li:hover {
+  -webkit-box-shadow: inset 0 0 2px 0 white;
+  box-shadow: inset 0 0 2px 0 white;
+}
+.footer__menu--opened .footer__nav ul li:hover a {
+  color: white;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
 .footer__nav {
   float: left;
 }
@@ -1593,12 +1633,18 @@ div[class*=" flaticon-"]:after {
   transition: opacity 0.25s ease-in-out;
   text-decoration: none;
 }
-.footer .hidden-panda {
+.footer #hidden-panda {
   display: none;
   width: 25px;
   height: 110px;
   background: url('../img/footer-spritesheet.png') no-repeat;
   background-position: -875px -5px;
+}
+.footer #hidden-panda:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 .footer__logo {
   float: left;
