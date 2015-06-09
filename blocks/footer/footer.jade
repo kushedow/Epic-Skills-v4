@@ -5,44 +5,48 @@
 // футер
 footer.footer
   .container
-    header.footer__header
+    header.footer__menu
 
       .footer__logo Epic Skills
+      .hidden-panda
+        a(href="#")
       nav.footer__nav
         ul
           each linkPath, linkName in footerNav
             li: a(href= linkPath) #{linkName}
 
     .footer__content
-      .footer__article
+      .footer__about
         p
           | Пожалуй, самый увлекательный способ получить навыки создания сайтов
-          |в Санкт-Петербурге. У нас можно получить level-up и открыть в себе способности
-          |веб-дизайнера, верстальщика или веб-программиста, собрать портфолио, пройти стажировку и найти работу.
+          | в Санкт-Петербурге. У нас можно получить level-up и открыть в себе способности
+          | веб-дизайнера, верстальщика или веб-программиста, собрать портфолио, пройти стажировку и найти работу.
         p
           | Мы сокращаем время обучения за счет свежих технологий, ярких заданий и непередаваемой атмосферы. Давайте знакомиться :)
 
         button.footer__btn Почитать про школу
         button.footer__btn Выбрать курс
 
-      aside.footer__sidebar
-        span.footer__sidebar__title Контакты
+      aside.footer__contacts
+        span.footer__contacts__title Контакты
 
-        .footer__sidebar__adress
-          span Наш офис: Чкаловский проспект, 15
-          span Время работы: 12:00 - 23:00
+        div
+          .footer__contacts__address
+            span Наш офис: Чкаловский проспект, 15
+            span Время работы: 12:00 - 23:00
 
-        .footer__sidebar__tel
-          span 8 (911) 232 22 32
-          button.footer__btn.footer__btn--small
-            | Позвоните мне!
+          .footer__contacts__tel
+            span 8 (911) 232 22 32
+            button.footer__btn.footer__btn--small
+              | Позвоните мне!
 
-        ul.footer__sidebar__social-icons
-          each linkPath, linkName in socialIcons
-            li: a(href= linkPath, class= "footer__sidebar__social-icons--#{linkName}", target="_blank")
-              | #{linkName}
+        div
+          ul.footer__contacts__social-icons
+            each linkPath, linkName in socialIcons
+              li: a(href= linkPath, class= "footer__contacts__social-icons--#{linkName}", target="_blank")
+                | #{linkName}
 
-        .footer__sidebar__info
-          span ООО "МедиаСемантика"
-          a.footer__modal-link(href="#")
-            span Юридическая информация
+          .footer__contacts__info
+            span ООО "МедиаСемантика"
+            a.footer__modal-link(href="#")
+              span Юридическая информация

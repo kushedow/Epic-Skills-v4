@@ -1,24 +1,22 @@
 
 @media (max-width: 992px) {
   footer {
-    .footer__article { width: 100%; }
-    .footer__sidebar {
+    .footer__about { width: 100%; max-width: none; }
+
+    //- спускаем контакты под описание и прячем заголовок
+    .footer__contacts {
+      padding: 0;
       width: 100%;
-      &__tel { margin-bottom: 20px; }
+      &__title { display: none !important;}
+      > div { width: 50%; float: left; }
+      > div:last-child { text-align: right; }
     }
   }
 }
 
 @media (max-width: 1200px) {
-  footer .footer__sidebar {
-      &__tel { margin-bottom: 20px; }
-    }
+  footer {
+    .container { width: 100%; }
+    .footer__contacts__tel { margin-bottom: 20px; }
+  }
 }
-
-// @media (min-width: 1024px) {
-//     .footer .container {
-//       width: 970px;
-//     }
-// }
-
-

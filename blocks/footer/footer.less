@@ -5,10 +5,11 @@
 
 .footer {
   color: white;
-  background: url('../blocks/footer/footer__bg--1920.jpg') center top;
+  background: url('../blocks/footer/footer__bg--1920.jpg') center top no-repeat;
+  background-size: cover;
   min-height: 350px;
 
-  &__header {
+  &__menu {
     height: 110px;
     line-height: 110px;
   }
@@ -24,6 +25,8 @@
         margin-right: 17px;
         padding-top: 3px;
 
+        &:last-child {margin-right: 0px;}
+
         a {
           color: white;
           font-size: 18px;
@@ -35,6 +38,17 @@
           }
         }
       }
+    }
+  }
+
+  .hidden-panda {
+    display: none;
+    width: 25px;
+    height: 110px;
+    background: url('../img/footer-spritesheet.png') no-repeat;
+    background-position: -875px -5px;
+    a {
+
     }
   }
 
@@ -61,11 +75,11 @@
     }
   }
 
-  &__article {
+  &__about {
     border: 3px solid @gray;
     padding: 25px 30px 5px 30px;
     min-width: 280px;
-    max-width: 720px;
+    max-width: 734px;
     width: 64%;
     float: left;
     margin-bottom: 40px;
@@ -81,7 +95,7 @@
 }
 
 
-.footer__sidebar {
+.footer__contacts {
   padding: 0 0 0 30px;
   width: 36%;
   min-width: 320px;
@@ -98,12 +112,14 @@
     display: block;
   }
 
-  &__adress {
+  &__address {
     padding-left: 35px;
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 30px;
     position: relative;
+
+    label {font-weight: normal;}
 
     &:before {
       content: "";
@@ -115,7 +131,7 @@
 
   &__tel {
     padding-left: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
 
     &:before {
@@ -145,6 +161,7 @@
       display: inline-block;
       text-indent: -9999px;
       margin-right: 14px;
+      font-size: 0px;
 
       &:last-child {margin:0;}
 

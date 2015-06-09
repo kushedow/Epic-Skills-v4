@@ -1,21 +1,32 @@
-@media (max-width: 494px) {
-  footer .footer__article {
-    > .footer__btn {
-      width: 100%;
-      min-width: 224px;
-    }
-  }
-}
-
 @media (max-width: 320px) {
   footer {
-    .container { width: 320px; }
-    .footer__article {
+    .container { width: 320px; padding: 0;}
+    .footer__about {
       min-width: 320px;
       border-left: none;
       border-right: none;
-      margin-left: -15px;
-      margin-right: -15px;
+    }
+    .footer__menu, .footer__contacts {padding: 0 20px !important;}
+  }
+}
+
+@media (max-width: 510px) {
+  footer {
+    .footer__about > .footer__btn {
+      width: 100%;
+      min-width: 224px;
+    }
+
+    .footer__logo:after {height: 0px;}
+    .footer__nav {display: none;}
+    .hidden-panda {
+      display: block !important;
+      float: right;
+    }
+
+    //- спускаем соц.иконки под телефон
+    .footer__contacts {
+      > div { width: 100% !important; text-align: left !important; }
     }
   }
 }
