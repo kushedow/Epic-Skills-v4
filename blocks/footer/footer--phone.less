@@ -1,27 +1,83 @@
 @media (max-width: 320px) {
   footer {
     .container { width: 320px; padding: 0;}
+
+    .footer__menu {
+       min-width: 305px;
+       padding: 0 20px !important;
+    }
+
     .footer__about {
       min-width: 320px;
       border-left: none;
       border-right: none;
     }
-    .footer__menu, .footer__contacts {padding: 0 20px !important;}
+
+    .footer__contacts { padding: 0 20px !important; }
   }
 }
 
 @media (max-width: 530px) {
   footer {
+    .footer__menu {
+      height: inherit;
+      line-height: inherit;
+
+      .footer__logo {
+        height: 110px;
+        line-height: 110px;
+
+        &:after {
+          height: 0px;
+        }
+      }
+
+      //- кардинально меняем навигашку
+      .footer__nav {
+        float: none;
+        display: none;
+        clear: both;
+        margin-bottom: 20px;
+
+        ul {
+          border: 1px solid @gray;
+          border-radius: 4px;
+
+          li {
+            margin: 0;
+            padding: 0;
+            float: none;
+            box-shadow: inset 0 0 1px 0 @gray;
+
+            a {
+              display: block;
+              padding: 20px;
+              color: @gray;
+            }
+
+            &:hover {
+              box-shadow: inset 0 0 2px 0 white;
+              a {
+                color: white;
+                opacity: 1;
+                transition: opacity 0.25s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //- и вот настало время панды )
+    #js-hidden-panda {
+      display: block !important;
+      float: right;
+    }
+
+    //- растягиваем кнопочки на весь блок
     .footer__about > .footer__btn {
       width: 100%;
       min-width: 224px;
-    }
-
-    .footer__logo:after {height: 0px;}
-    .footer__nav {display: none;}
-    #hidden-panda {
-      display: block !important;
-      float: right;
     }
 
     //- спускаем соц.иконки под телефон
@@ -31,8 +87,11 @@
   }
 }
 
+//- это не мое, я не знаю откуда это здесь и зачем
+//- пожалуйста, удалите или подпишите, кто в курсе
 @media (max-width: 500px) {
     footer .row { margin: 0; }
     footer.newBlack a.mail { margin-top: 10px; }
     footer.newBlack .vk { float: none; }
 }
+//- п.с.: Никита

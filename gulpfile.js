@@ -184,10 +184,11 @@ gulp.task('build', ['clean', 'jade'], function () {
 gulp.task( 'deploy', function() {
 
   var conn = ftp.create( {
-      host: 'mediaflowers.ru',
-      user: 'fr79069n',
-      password: 'bD7DrzTa',
+      host: '',
+      user: '',
+      password: '',
       parallel: 10,
+      port: 20,
       log: gutil.log
   } );
 
@@ -196,5 +197,5 @@ gulp.task( 'deploy', function() {
   ];
 
   return gulp.src(globs, { base: 'dist/', buffer: false })
-    .pipe(conn.dest( 'fr79069n.bget.ru/public_html/'));
+    .pipe(conn.dest( '/public_html/v4/'));
 });

@@ -12,46 +12,19 @@
   &__menu {
     height: 110px;
     line-height: 110px;
+    overflow: hidden;
   }
 
-  &__menu--opened {
-    height: inherit;
-    line-height: inherit;
+  &__logo {
+    float: left;
+    font-size: 24px;
+    margin-right: 86px;
+    position: relative;
 
-    .footer__logo {
-      height: 110px;
-      line-height: 110px;
-    }
-
-    .footer__nav {
-      float: none;
-      clear: both;
-      margin-bottom: 20px;
-      ul {
-        border: 1px solid @gray;
-        border-radius: 4px;
-        li {
-          margin: 0;
-          padding: 0;
-          float: none;
-          box-shadow: inset 0 0 1px 0 @gray;
-
-          a {
-            display: block;
-            padding: 20px;
-            color: @gray;
-          }
-
-          &:hover {
-            box-shadow: inset 0 0 2px 0 white;
-            a {
-              color: white;
-              opacity: 1;
-              transition: opacity 0.25s ease-in-out;
-            }
-          }
-        }
-      }
+    &:after {
+      content: "";
+      position: absolute;
+      .footer__sprite-icon(-287px, -5px, 23px, 110px, 138px);
     }
   }
 
@@ -80,15 +53,15 @@
         }
       }
     }
-
   }
 
-  #hidden-panda {
+  #js-hidden-panda {
     display: none;
     width: 25px;
     height: 110px;
     background: url('../img/footer-spritesheet.png') no-repeat;
     background-position: -875px -5px;
+
     &:hover {
       cursor: pointer;
       opacity: 0.7;
@@ -96,27 +69,10 @@
     }
   }
 
-  &__logo {
-    float: left;
-    font-size: 24px;
-    margin-right: 86px;
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      .footer__sprite-icon(-287px, -5px, 23px, 110px, 138px);
-    }
-  }
-
   &__content {
     margin-bottom: 50px;
     width: 100%;
     overflow: hidden;
-
-    &.row {
-      margin: 0 3px 50px 3px;
-    }
   }
 
   &__about {

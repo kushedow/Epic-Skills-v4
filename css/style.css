@@ -1404,30 +1404,71 @@ div[class*=" flaticon-"]:after {
     width: 320px;
     padding: 0;
   }
+  footer .footer__menu {
+    min-width: 305px;
+    padding: 0 20px !important;
+  }
   footer .footer__about {
     min-width: 320px;
     border-left: none;
     border-right: none;
   }
-  footer .footer__menu,
   footer .footer__contacts {
     padding: 0 20px !important;
   }
 }
 @media (max-width: 530px) {
+  footer .footer__menu {
+    height: inherit;
+    line-height: inherit;
+  }
+  footer .footer__menu .footer__logo {
+    height: 110px;
+    line-height: 110px;
+  }
+  footer .footer__menu .footer__logo:after {
+    height: 0px;
+  }
+  footer .footer__menu .footer__nav {
+    float: none;
+    display: none;
+    clear: both;
+    margin-bottom: 20px;
+  }
+  footer .footer__menu .footer__nav ul {
+    border: 1px solid #dedede;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  footer .footer__menu .footer__nav ul li {
+    margin: 0;
+    padding: 0;
+    float: none;
+    -webkit-box-shadow: inset 0 0 1px 0 #dedede;
+    box-shadow: inset 0 0 1px 0 #dedede;
+  }
+  footer .footer__menu .footer__nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #dedede;
+  }
+  footer .footer__menu .footer__nav ul li:hover {
+    -webkit-box-shadow: inset 0 0 2px 0 white;
+    box-shadow: inset 0 0 2px 0 white;
+  }
+  footer .footer__menu .footer__nav ul li:hover a {
+    color: white;
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+  }
+  footer #js-hidden-panda {
+    display: block !important;
+    float: right;
+  }
   footer .footer__about > .footer__btn {
     width: 100%;
     min-width: 224px;
-  }
-  footer .footer__logo:after {
-    height: 0px;
-  }
-  footer .footer__nav {
-    display: none;
-  }
-  footer #hidden-panda {
-    display: block !important;
-    float: right;
   }
   footer .footer__contacts > div {
     width: 100% !important;
@@ -1568,46 +1609,24 @@ div[class*=" flaticon-"]:after {
 .footer__menu {
   height: 110px;
   line-height: 110px;
+  overflow: hidden;
 }
-.footer__menu--opened {
-  height: inherit;
-  line-height: inherit;
+.footer__logo {
+  float: left;
+  font-size: 24px;
+  margin-right: 86px;
+  position: relative;
 }
-.footer__menu--opened .footer__logo {
+.footer__logo:after {
+  content: "";
+  position: absolute;
+  background-image: url('../img/footer-spritesheet.png');
+  background-repeat: no-repeat;
+  background-position: -287px -5px;
+  width: 23px;
   height: 110px;
-  line-height: 110px;
-}
-.footer__menu--opened .footer__nav {
-  float: none;
-  clear: both;
-  margin-bottom: 20px;
-}
-.footer__menu--opened .footer__nav ul {
-  border: 1px solid #dedede;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-.footer__menu--opened .footer__nav ul li {
-  margin: 0;
-  padding: 0;
-  float: none;
-  -webkit-box-shadow: inset 0 0 1px 0 #dedede;
-  box-shadow: inset 0 0 1px 0 #dedede;
-}
-.footer__menu--opened .footer__nav ul li a {
-  display: block;
-  padding: 20px;
-  color: #dedede;
-}
-.footer__menu--opened .footer__nav ul li:hover {
-  -webkit-box-shadow: inset 0 0 2px 0 white;
-  box-shadow: inset 0 0 2px 0 white;
-}
-.footer__menu--opened .footer__nav ul li:hover a {
-  color: white;
-  opacity: 1;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+  left: 138px;
+  top: 0;
 }
 .footer__nav {
   float: left;
@@ -1633,43 +1652,23 @@ div[class*=" flaticon-"]:after {
   transition: opacity 0.25s ease-in-out;
   text-decoration: none;
 }
-.footer #hidden-panda {
+.footer #js-hidden-panda {
   display: none;
   width: 25px;
   height: 110px;
   background: url('../img/footer-spritesheet.png') no-repeat;
   background-position: -875px -5px;
 }
-.footer #hidden-panda:hover {
+.footer #js-hidden-panda:hover {
   cursor: pointer;
   opacity: 0.7;
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
 }
-.footer__logo {
-  float: left;
-  font-size: 24px;
-  margin-right: 86px;
-  position: relative;
-}
-.footer__logo:after {
-  content: "";
-  position: absolute;
-  background-image: url('../img/footer-spritesheet.png');
-  background-repeat: no-repeat;
-  background-position: -287px -5px;
-  width: 23px;
-  height: 110px;
-  left: 138px;
-  top: 0;
-}
 .footer__content {
   margin-bottom: 50px;
   width: 100%;
   overflow: hidden;
-}
-.footer__content.row {
-  margin: 0 3px 50px 3px;
 }
 .footer__about {
   border: 3px solid #dedede;
