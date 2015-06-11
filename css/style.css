@@ -1406,7 +1406,12 @@ div[class*=" flaticon-"]:after {
   }
   footer .footer__menu {
     min-width: 305px;
-    padding: 0 20px !important;
+  }
+  footer .footer__logo {
+    margin-left: 20px;
+  }
+  footer #js-hidden-panda {
+    margin-right: 20px !important;
   }
   footer .footer__about {
     min-width: 320px;
@@ -1423,8 +1428,8 @@ div[class*=" flaticon-"]:after {
     line-height: inherit;
   }
   footer .footer__menu .footer__logo {
-    height: 110px;
-    line-height: 110px;
+    height: 58px;
+    line-height: 58px;
   }
   footer .footer__menu .footer__logo:after {
     height: 0px;
@@ -1433,30 +1438,19 @@ div[class*=" flaticon-"]:after {
     float: none;
     display: none;
     clear: both;
-    margin-bottom: 20px;
-  }
-  footer .footer__menu .footer__nav ul {
-    border: 1px solid #dedede;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
   }
   footer .footer__menu .footer__nav ul li {
     margin: 0;
     padding: 0;
     float: none;
-    -webkit-box-shadow: inset 0 0 1px 0 #dedede;
-    box-shadow: inset 0 0 1px 0 #dedede;
+    border-top: 1px solid #dedede;
   }
   footer .footer__menu .footer__nav ul li a {
     display: block;
-    padding: 20px;
+    padding: 20px 22px;
     color: #dedede;
   }
-  footer .footer__menu .footer__nav ul li:hover {
-    -webkit-box-shadow: inset 0 0 2px 0 white;
-    box-shadow: inset 0 0 2px 0 white;
-  }
-  footer .footer__menu .footer__nav ul li:hover a {
+  footer .footer__menu .footer__nav ul li a:hover {
     color: white;
     opacity: 1;
     -webkit-transition: opacity 0.25s ease-in-out;
@@ -1465,6 +1459,8 @@ div[class*=" flaticon-"]:after {
   footer #js-hidden-panda {
     display: block !important;
     float: right;
+    height: 58px !important;
+    background-position: -875px -33px !important;
   }
   footer .footer__about > .footer__btn {
     width: 100%;
@@ -1602,7 +1598,7 @@ div[class*=" flaticon-"]:after {
 /* ////////////////////////////////////////////////////// */
 .footer {
   color: white;
-  background: url('../blocks/footer/footer__bg--1920.jpg') center top no-repeat;
+  background: url('../blocks/footer/footer__bg--1920.jpg') center center no-repeat;
   background-size: cover;
   min-height: 350px;
 }

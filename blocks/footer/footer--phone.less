@@ -4,8 +4,13 @@
 
     .footer__menu {
        min-width: 305px;
-       padding: 0 20px !important;
+       .footer__nav ul {
+
+       }
     }
+
+    .footer__logo { margin-left: 20px; }
+    #js-hidden-panda { margin-right: 20px !important; }
 
     .footer__about {
       min-width: 320px;
@@ -24,8 +29,8 @@
       line-height: inherit;
 
       .footer__logo {
-        height: 110px;
-        line-height: 110px;
+        height: 58px;
+        line-height: 58px;
 
         &:after {
           height: 0px;
@@ -37,31 +42,23 @@
         float: none;
         display: none;
         clear: both;
-        margin-bottom: 20px;
 
-        ul {
-          border: 1px solid @gray;
-          border-radius: 4px;
+        ul li {
+          margin: 0;
+          padding: 0;
+          float: none;
+          border-top: 1px solid #dedede;
+          // box-shadow: inset 0 0 1px 0 @gray;
 
-          li {
-            margin: 0;
-            padding: 0;
-            float: none;
-            box-shadow: inset 0 0 1px 0 @gray;
-
-            a {
-              display: block;
-              padding: 20px;
-              color: @gray;
-            }
+          a {
+            display: block;
+            padding: 20px 22px;
+            color: @gray;
 
             &:hover {
-              box-shadow: inset 0 0 2px 0 white;
-              a {
-                color: white;
-                opacity: 1;
-                transition: opacity 0.25s ease-in-out;
-              }
+              color: white;
+              opacity: 1;
+              transition: opacity 0.25s ease-in-out;
             }
           }
         }
@@ -72,6 +69,8 @@
     #js-hidden-panda {
       display: block !important;
       float: right;
+      height: 58px !important;
+      background-position: -875px -33px !important;
     }
 
     //- растягиваем кнопочки на весь блок
