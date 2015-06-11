@@ -1426,6 +1426,9 @@ div[class*=" flaticon-"]:after {
   }
 }
 @media (max-width: 530px) {
+  footer.footer {
+    background-image: url('../blocks/footer/footer__bg--768.jpg') !important;
+  }
   footer .footer__menu {
     height: inherit;
     line-height: inherit;
@@ -1487,6 +1490,9 @@ div[class*=" flaticon-"]:after {
   }
 }
 @media (max-width: 992px) {
+  footer.footer {
+    background-image: url('../blocks/footer/footer__bg--1024.jpg');
+  }
   footer .footer__about {
     width: 100%;
     max-width: none;
@@ -1602,7 +1608,10 @@ div[class*=" flaticon-"]:after {
 /* ////////////////////////////////////////////////////// */
 .footer {
   color: white;
-  background: url('../blocks/footer/footer__bg--1920.jpg') center center no-repeat;
+  background-image: url('../blocks/footer/footer__bg--1920.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #042e46;
   background-size: cover;
   min-height: 350px;
 }
@@ -1656,7 +1665,7 @@ div[class*=" flaticon-"]:after {
   display: none;
   width: 25px;
   height: 58px;
-  background: url('../img/footer-spritesheet.png') no-repeat;
+  background: url('../blocks/footer/footer-spritesheet.png') no-repeat;
   background-position: -875px -33px;
 }
 .footer #js-hidden-panda:hover {
