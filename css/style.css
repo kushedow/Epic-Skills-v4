@@ -1645,6 +1645,8 @@ div[class*=" flaticon-"]:after {
 }
 .footer__nav ul {
   list-style: none;
+  overflow: hidden;
+  margin: 0;
 }
 .footer__nav ul li {
   float: left;
@@ -1839,6 +1841,7 @@ div[class*=" flaticon-"]:after {
   height: 18px;
 }
 .footer__btn {
+  display: inline-block;
   border: 1px solid #dedede;
   color: white;
   -webkit-border-radius: 3px;
@@ -1855,6 +1858,8 @@ div[class*=" flaticon-"]:after {
 }
 .footer__btn:hover {
   opacity: 0.7;
+  color: white;
+  text-decoration: none;
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
 }
@@ -1862,7 +1867,6 @@ div[class*=" flaticon-"]:after {
   padding: 8px;
   font-size: 15px;
   line-height: 10px;
-  width: default;
 }
 .footer__btn--small:hover {
   opacity: 0.7;

@@ -33,6 +33,7 @@ gulp.task('deliver', function() {
 var autoprefixer = require('gulp-autoprefixer'),
     prettify = require('gulp-prettify'),
     minifyCSS = require('gulp-minify-css'),
+    uglify = require('gulp-uglify'),
     jade = require('gulp-jade'),
     less = require('gulp-less'),
     gutil = require('gulp-util'),
@@ -135,6 +136,8 @@ gulp.task('html:build', function () {
   var assets = useref.assets();
   return gulp.src(path.src.html)
     .pipe(assets)
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.css', minifyCSS({compatibility: 'ie8'})))
     .pipe(assets.restore())
     .pipe(useref())
     .pipe(gulp.dest(path.build.html));

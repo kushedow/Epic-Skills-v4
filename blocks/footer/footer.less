@@ -36,6 +36,8 @@
 
     ul {
       list-style: none;
+      overflow: hidden;
+      margin: 0;
 
       li {
         float: left;
@@ -202,6 +204,7 @@
 }
 
 .footer__btn {
+  display: inline-block;
   border: 1px solid @gray;
   color: white;
   border-radius: 3px;
@@ -216,6 +219,8 @@
 
   &:hover {
     opacity: 0.7;
+    color: white;
+    text-decoration: none;
     transition: @transition-default;
   }
 
@@ -223,7 +228,6 @@
     padding: 8px;
     font-size: 15px;
     line-height: 10px;
-    width: default;
 
     &:hover {
       opacity: 0.7;
