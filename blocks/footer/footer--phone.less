@@ -4,9 +4,6 @@
 
     .footer__menu {
        min-width: 305px;
-       .footer__nav ul {
-
-       }
     }
 
     .footer__logo { margin-left: 20px; }
@@ -18,7 +15,12 @@
       border-right: none;
     }
 
-    .footer__contacts { padding: 0 20px !important; }
+    .footer__contacts {
+      padding: 0 20px !important;
+
+      //- удаляем заголовок Время работы
+      &__address span:last-child label { display: none; }
+    }
   }
 }
 
@@ -69,8 +71,6 @@
     #js-hidden-panda {
       display: block !important;
       float: right;
-      height: 58px !important;
-      background-position: -875px -33px !important;
     }
 
     //- растягиваем кнопочки на весь блок
@@ -82,12 +82,15 @@
     //- спускаем соц.иконки под телефон
     .footer__contacts {
       > div { width: 100% !important; text-align: left !important; }
+
+      //- фиксируем заголовки Наш офис и Время работы на отдельных строках
+      &__address span label { display: block; }
     }
   }
 }
 
 //- это не мое, я не знаю откуда это здесь и зачем
-//- пожалуйста, удалите или подпишите, кто в курсе
+//- пожалуйста, подпишите или удалите, кто в курсе
 @media (max-width: 500px) {
     footer .row { margin: 0; }
     footer.newBlack a.mail { margin-top: 10px; }
