@@ -80,6 +80,7 @@ gulp.task('less', function() {
       browsers: ['last 15 versions', 'ie 8', 'ie 9'],
       cascade: false
     }))
+    .pipe(minifyCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./css'))
     .pipe(reload({stream: true}));
 });
@@ -136,7 +137,6 @@ gulp.task('html:build', function () {
   var assets = useref.assets();
   return gulp.src(path.src.html)
     .pipe(assets)
-    .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCSS({compatibility: 'ie8'})))
     .pipe(assets.restore())
     .pipe(useref())
@@ -145,6 +145,7 @@ gulp.task('html:build', function () {
 
 gulp.task('css:build', function () {
   gulp.src(path.src.css)
+    .pipe(minifyCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(path.build.css));
 });
 
