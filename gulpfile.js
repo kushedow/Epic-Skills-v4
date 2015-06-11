@@ -170,7 +170,7 @@ gulp.task('img:build', function () {
     .pipe(gulp.dest(path.build.img));
 });
 
-gulp.task('dist', ['html:build','js:build', 'css:build', 'blocks:build', 'img:build']);
+gulp.task('dist', ['html:build','js:build', 'less:build', 'jade:build', 'css:build', 'blocks:build', 'img:build']);
 
 gulp.task('build', ['clean', 'jade'], function () {
   gulp.start('dist');
