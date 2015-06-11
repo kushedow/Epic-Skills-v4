@@ -1629,7 +1629,7 @@ div[class*=" flaticon-"]:after {
 .footer__logo:after {
   content: "";
   position: absolute;
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -287px -5px;
   width: 23px;
@@ -1731,7 +1731,7 @@ div[class*=" flaticon-"]:after {
   content: "";
   position: absolute;
   display: block;
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -50px -50px;
   width: 17px;
@@ -1748,7 +1748,7 @@ div[class*=" flaticon-"]:after {
   content: "";
   position: absolute;
   display: block;
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -167px -50px;
   width: 20px;
@@ -1766,7 +1766,7 @@ div[class*=" flaticon-"]:after {
   margin-bottom: 30px;
 }
 .footer__contacts__social-icons--vkontakte {
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -776px -50px;
   width: 22px;
@@ -1775,7 +1775,7 @@ div[class*=" flaticon-"]:after {
   top: 0;
 }
 .footer__contacts__social-icons--facebook {
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -410px -50px;
   width: 22px;
@@ -1784,7 +1784,7 @@ div[class*=" flaticon-"]:after {
   top: 0;
 }
 .footer__contacts__social-icons--instagram {
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -532px -50px;
   width: 22px;
@@ -1793,7 +1793,7 @@ div[class*=" flaticon-"]:after {
   top: 0;
 }
 .footer__contacts__social-icons--twitter {
-  background-image: url('../img/footer-spritesheet.png');
+  background-image: url('../blocks/footer/footer-spritesheet.png');
   background-repeat: no-repeat;
   background-position: -654px -50px;
   width: 22px;
