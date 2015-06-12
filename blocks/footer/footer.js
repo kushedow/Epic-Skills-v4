@@ -5,8 +5,9 @@ jQuery(document).ready(function(){
   });
 
   // мой сложноватый, но рабочий фикс выпадашки
+  // до фикса: если пощелкать выпадашку, а потом увеличить окно, то у навигации оставался disply:block
   if (matchMedia) {
-    var mq = window.matchMedia("(min-width: 530px)");
+    var mq = window.matchMedia("(min-width: 765px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
   }
@@ -14,9 +15,9 @@ jQuery(document).ready(function(){
   // если тоже самое прописывать в css, то ломается .slideToggle
   function WidthChange(mq) {
     if (mq.matches) {
-      jQuery( ".footer__nav" ).css( "display", "block" );
+      jQuery( ".footer__nav" ).show();
     } else {
-      jQuery( ".footer__nav" ).css( "display", "none" );
+      jQuery( ".footer__nav" ).hide();
     }
   }
 });
