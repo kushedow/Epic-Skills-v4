@@ -188,14 +188,14 @@ gulp.task('build', ['clean', 'jade'], function () {
 gulp.task( 'deploy', function() {
 
   var conn = ftp.create( {
-      host: '',
-      user: '',
-      password: '',
+      host: 'a.epixx.ru',
+      user: 'epic_assets',
+      password: '1TGHryqndKUXNtxnWO0u8JcpTVVS29',
       port: 20,
       parallel: 10,
       log: gutil.log
   } );
-
+  
   var globs = [
       'dist/**/*'
   ];
