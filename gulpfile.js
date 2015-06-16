@@ -191,15 +191,36 @@ gulp.task( 'deploy', function() {
       host: 'a.epixx.ru',
       user: 'epic_assets',
       password: '1TGHryqndKUXNtxnWO0u8JcpTVVS29',
-      port: 20,
       parallel: 10,
       log: gutil.log
   } );
-  
+
   var globs = [
       'dist/**/*'
   ];
 
   return gulp.src(globs, { base: 'dist/', buffer: false })
-    .pipe(conn.dest( '/public_html/v4/'));
+    .pipe(conn.dest( 'public_html/v4/'));
+});
+
+// ===========================================
+// ============ DEPLOY for NIKITA ============
+// ===========================================
+
+gulp.task( 'nikitadeploy', function() {
+
+  var conn = ftp.create( {
+      host: 'mediaflowers.ru',
+      user: 'fr79069n',
+      password: 'bD7DrzTa',
+      parallel: 10,
+      log: gutil.log
+  } );
+
+  var globs = [
+      'dist/**/*'
+  ];
+
+  return gulp.src(globs, { base: 'dist/', buffer: false })
+    .pipe(conn.dest( 'public_html/'));
 });

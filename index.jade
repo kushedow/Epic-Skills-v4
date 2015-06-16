@@ -4,44 +4,39 @@ html(lang="en")
   include ./jade/head.jade
   body
     :verbatim
+
+    //- фапотька
     include ./blocks/header/header.jade
 
     //- блок промо
-
     include ./blocks/course-promo/course-promo.jade
 
-    //- детали курса
+    //- блок апи
+    include ./blocks/course-api/course-api.jade
 
+    //- детали курса
     include ./blocks/details/details.jade
 
     //-  программа курса
-
     include ./blocks/program/program.jade
 
     //- команда
-
     include ./blocks/team/team.jade
 
     //- частые вопросы
-
     include ./blocks/faq/faq.jade
 
     //- процесс
-
     include ./blocks/process/process.jade
 
     //- обратная связь
-
     include ./blocks/feedback/feedback.jade
 
     //- форма регистрации
-
     include ./blocks/register/register.jade
 
     //- похожие курсы
-
     include ./blocks/related_courses/related_courses.jade
 
     //- подвальчик
-
     include ./blocks/footer/footer.jade

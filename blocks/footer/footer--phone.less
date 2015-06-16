@@ -23,6 +23,15 @@
     }
   }
 }
+@media (max-width: 530px) {
+  //- спускаем соц.иконки под телефон
+  .footer__contacts {
+    > div { width: 100% !important; text-align: left !important; }
+
+    //- фиксируем заголовки Наш офис и Время работы на отдельных строках
+    &__address span label { display: block; }
+  }
+}
 
 @media (max-width: 764px) {
   footer {
@@ -78,14 +87,6 @@
     .footer__about > .footer__btn {
       width: 100%;
       min-width: 224px;
-    }
-
-    //- спускаем соц.иконки под телефон
-    .footer__contacts {
-      > div { width: 100% !important; text-align: left !important; }
-
-      //- фиксируем заголовки Наш офис и Время работы на отдельных строках
-      &__address span label { display: block; }
     }
   }
 }
