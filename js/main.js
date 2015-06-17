@@ -1,23 +1,47 @@
 jQuery(document).ready(function(){
-  // футер: выпадашка для мобильных
-  jQuery( "#js-hidden-panda" ).click(function() {
-    jQuery( ".footer__nav" ).slideToggle( "slow" );
+  // ШАПОЧКА
+  // отображение и скрытие навигашки
+  jQuery("#js-header-panda").click(function() {
+    jQuery(".header__nav").slideToggle("slow");
   });
 
-  // мой сложноватый, но рабочий фикс выпадашки
-  // до фикса: если пощелкать выпадашку, а потом увеличить окно, то у навигации оставался disply:block
+  // мой сложноватый, но рабочий фикс
+  // до фикса: если пощелкать выпадашку, а потом увеличить окно, то у навигации оставался disply:none
   if (matchMedia) {
-    var mq = window.matchMedia("(min-width: 765px)");
-    mq.addListener(WidthChange);
-    WidthChange(mq);
+    var headerMQ = window.matchMedia("(min-width: 768px)");
+    headerMQ.addListener(headerWidthChange);
+    headerWidthChange(headerMQ);
   }
 
   // если тоже самое прописывать в css, то ломается .slideToggle
-  function WidthChange(mq) {
-    if (mq.matches) {
-      jQuery( ".footer__nav" ).show();
+  function headerWidthChange(headerMQ) {
+    if (headerMQ.matches) {
+      jQuery(".header__nav").show();
     } else {
-      jQuery( ".footer__nav" ).hide();
+      jQuery(".header__nav").hide();
+    }
+  }
+
+  // ПОДВАЛЬЧИК
+  // отображение и скрытие навигашки
+  jQuery("#js-footer-panda").click(function() {
+    jQuery(".footer__nav").slideToggle("slow");
+  });
+
+  // мой сложноватый, но рабочий фикс
+  // до фикса: если пощелкать выпадашку, а потом увеличить окно, то у навигации оставался disply:none
+  if (matchMedia) {
+    var footerMQ = window.matchMedia("(min-width: 768px)");
+    footerMQ.addListener(footerWidthChange);
+    footerWidthChange(footerMQ);
+  }
+
+  // если тоже самое прописывать в css, то ломается .slideToggle
+  function footerWidthChange(footerMQ) {
+    if (footerMQ.matches) {
+      jQuery(".footer__nav").show();
+    } else {
+      jQuery(".footer__nav").hide();
     }
   }
 });

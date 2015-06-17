@@ -1,0 +1,46 @@
+@media (max-width: 767px) {
+  header {
+    //- кардинально меняем навигашку
+    .header__nav {
+      float: none;
+      display: none;
+      clear: both;
+
+      ul {
+        height: inherit;
+        line-height: inherit;
+
+        li {
+          margin: 0;
+          padding: 0;
+          display: block;
+          border-top: 1px solid #33343D;
+
+          a {
+            display: block;
+            padding: 20px 22px;
+            font-size: 18px;
+
+            &:hover {
+              color: white;
+              opacity: 1;
+              transition: opacity 0.25s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    //- и вот настало время панды )
+    #js-header-panda {
+      display: block !important;
+      float: right;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    .container { width: 100%; }
+  }
+}

@@ -3,15 +3,16 @@ include ./../../jade/variables.jade
 // стандартная шапочка сайта
 header.header
   .container
-    .site-logo
-      a.site-logo__link(href='/')
-        img.site-logo__image(src='../blocks/header/site-logo__image.svg')
-        img.site-logo__name(src='../blocks/header/site-logo__name.svg')
+    .header__logo
+      a.header__logo__link(href='/')
+        img.header__logo__image(src='../blocks/header/site-logo__image.svg')
+        img.header__logo__name(src='../blocks/header/site-logo__name.svg')
 
     // выпадашка
+    span#js-header-panda
 
     // навигация
-    nav.main-nav.hidden-xs
+    nav.header__nav
       ul
         each linkPath, linkName in mainNav
           li: a(href= linkPath) #{linkName}
