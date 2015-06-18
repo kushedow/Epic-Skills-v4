@@ -1,34 +1,17 @@
+include ./mixins.jade
+
 .course-inside
 	.container
 		.course-inside__heading.text-center Что внутри
-		.row.course-inside__info
-			.col-xs-4.course-inside__wrap
-				.course-inside__benefits
-					h2.course-benefits__title Что вы получите после завершения курса?
-					.course-benefits__wrap
-						.course-benefits__item 
-							h3.course-benefits__heading Два модных проекта в портфолио
-							p.course-benefits__question Почему это важно?
-							p.course-benefits__answer Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.
-						.course-benefits__item 
-							h3.course-benefits__heading Два модных проекта в портфолио
-							p.course-benefits__question Почему это важно?
-							p.course-benefits__answer Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.
-						.course-benefits__item 
-							h3.course-benefits__heading Два модных проекта в портфолио
-							p.course-benefits__question Почему это важно?
-							p.course-benefits__answer Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.
-			.col-xs-4.course-inside__wrap
-				.course-inside__project
-					.course-project__img
-						img(src="blocks/course-inside/course-project__img1.jpg", alt="", target="_blank")
-					.course-project__title Монгольерфкин
-					.course-project__subtitle Посадочная страница
-					a.course-project__button Смотреть работу
-			.col-xs-4.course-inside__wrap
-				.course-inside__project
-					.course-project__img
-						img(src="blocks/course-inside/course-project__img2.jpg", alt="", target="_blank")
-					.course-project__title Монгольерфкин
-					.course-project__subtitle Посадочная страница
-					a.course-project__button Смотреть работу
+		.course-inside__info.row
+
+			.course-inside__benefits.col-md-3
+				h2.course-inside__benefits__title Что вы получите после завершения курса?
+				.course-inside__benefits__wrap
+					+course-inside__benefits__item("Два модных проекта в портфолио", "Почему это важно?", "Ваше портфолио – повод получить заказы или работу. К тому же, это отличный способ показать, чем вы там занимаетесь вообще.")
+					+course-inside__benefits__item('Заголовок 02', 'Вопрос 02', 'Ответ 02')
+					+course-inside__benefits__item('Заголовок 03', 'Вопрос 03', 'Ответ 03')
+
+			.course-inside__projects-group.col-md-9
+				+course-inside__project("blocks/course-inside/course-project__img2.jpg", 'project_02', 'Монгольерфкин')
+				+course-inside__project("blocks/course-inside/course-project__img1.jpg", 'project_01', 'Аэростат')

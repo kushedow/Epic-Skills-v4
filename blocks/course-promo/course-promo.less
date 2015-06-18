@@ -1,4 +1,6 @@
 /* promo/promo.less */
+@import "course-promo--phone.less";
+@import "course-promo--tablet.less";
 
 @font-face {
 	font-family: "Flaticon";
@@ -63,11 +65,13 @@ div[class^="flaticon-"]:before, div[class*=" flaticon-"]:before, div[class^="fla
 	&__icon {
 		display: inline-block;
 		vertical-align: top;
-		width: 28%;
+    // ОБЯЗАТЕЛЬНО НЕ ЗАБЫТЬ РАСКОММЕНТИТЬ
+		// width: 28%;
 		margin-right: 5%;
 		text-align: right;
 	}
 }
+
 .course-text {
 	&__title {
 		font-size: @lead;
@@ -78,56 +82,52 @@ div[class^="flaticon-"]:before, div[class*=" flaticon-"]:before, div[class^="fla
 		font-weight: normal;
 	}
 }
-	.course-promo__heading {
-		padding-top: 100px;
+
+.course-promo__heading {
+	padding-top: 100px;
+	color: @white;
+}
+.course-promo__heading span {
+	font-size: @h1;
+	line-height: @lh-h1;
+	font-weight: bold;
+	margin-bottom: 54px;
+}
+
+.course-promo__descripton{
+	color: @white;
+	margin-bottom: 42px;
+	font-size: @medium+(-2px);
+	line-height: @lh-m;
+	padding: 0 30px;
+}
+
+.course-promo__button{
+	font-size: 18px;
+	line-height: @lh-m;
+	color: @white;
+	margin-bottom: 80px;
+	background-color: @red;
+	border-radius: 10px;
+	padding: 15px 64px 15px 30px;
+	cursor: pointer;
+	display: inline-block;
+	background-image: url(../blocks/course-promo/course-promo__icon.png);
+	background-repeat: no-repeat;
+		background-position: 94% 50%;
+	&:hover {
+		opacity: 0.8;
+		text-decoration: none;
 		color: @white;
 	}
-	.course-promo__heading span {
-		font-size: @h1;
-		line-height: @lh-h1;
-		font-weight: bold;
-		margin-bottom: 54px;
-	}
-
-	.course-promo__descripton{
+	&:active {
+		opacity: 0.6;
+		text-decoration: none;
 		color: @white;
-		margin-bottom: 42px;
-		font-size: @medium+(-2px);
-		line-height: @lh-m;
-		padding: 0 30px;
 	}
-
-	.course-promo__button{
-		font-size: 18px;
-		line-height: @lh-m;
+	&:focus {
+		opacity: 0.6;
+		text-decoration: none;
 		color: @white;
-		margin-bottom: 80px;
-		background-color: @red;
-		border-radius: 10px;
-		padding: 15px 64px 15px 30px;
-		cursor: pointer;
-		display: inline-block;
-		background-image: url(../blocks/course-promo/course-promo__icon.png);
-		background-repeat: no-repeat;
-  		background-position: 94% 50%;
-		&:hover {
-			opacity: 0.8;
-			text-decoration: none;
-			color: @white;
-		}
-		&:active {
-			opacity: 0.6;
-			text-decoration: none;
-			color: @white;
-		}
-		&:focus {
-			opacity: 0.6;
-			text-decoration: none;
-			color: @white;
-		}
 	}
-
-
-
-@import "course-promo--phone.less";
-@import "course-promo--tablet.less";
+}
