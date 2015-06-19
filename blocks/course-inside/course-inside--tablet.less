@@ -1,8 +1,35 @@
 @media (max-width: 992px) {
   .course-inside {
+    padding-bottom: 80px !important;
+
+    .container { padding: 0 26px; }
+    .course-inside__info { margin: 0; }
+    .course-inside__benefits {
+      float: none;
+      width: 100%;
+      margin-bottom: 50px;
+
+      &__item {
+        width: 50%;
+        float: left;
+
+        &:nth-child(1) { padding-right: 28px; }
+        &:nth-child(2) { padding-left: 40px; }
+
+        h2, p { max-width: 344px; }
+      }
+    }
+
     .course-inside__projects-group {
       float: none;
+      width: 100%;
       text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-inside__project {
+      float: none;
     }
   }
 }

@@ -1,7 +1,7 @@
 @import "course-inside--phone.less";
 @import "course-inside--tablet.less";
-// @import "less/mixin.less";
-// @import "less/variables.less";
+@import "less/mixin.less";
+@import "less/variables.less";
 
 .course-inside {
 	padding-top: 20px;
@@ -21,6 +21,14 @@
 .course-inside__benefits {
 	min-width: 200px;
 	float: left;
+	padding: 0 calc(28px + 15px);
+
+	&__wrap {
+		&:extend(.clearfix all);
+		min-width: 320px;
+	}
+
+	&__item {}
 
 	&__title {
 		font-size: @h2+4px;
@@ -34,6 +42,17 @@
 		line-height: @medium+4px;
 		margin-bottom: 5px;
 		font-weight: normal;
+		position: relative;
+
+		&:before {
+			content: "";
+			background: url('../blocks/course-inside/course-inside__green-plus.png') no-repeat;
+			position: absolute;
+			height: 18px;
+			width: 18px;
+			left: -26px;
+			top: 6px;
+		}
 	}
 
 	&__question {
@@ -58,7 +77,6 @@
 .course-inside__project {
 	display: inline-block;
 	max-width: 334px;
-	margin-left: 4%;
 	text-align: center;
 	vertical-align: top;
 

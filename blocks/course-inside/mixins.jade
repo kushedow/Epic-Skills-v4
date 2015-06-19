@@ -5,7 +5,7 @@ mixin course-inside__benefits__item(heading, question, answer)
     p.course-inside__benefits__answer= answer
 
 mixin course-inside__project(imgPath, imgAlt, title)
-  .course-inside__project
+  .course-inside__project.col-xs-6
     .course-inside__project__img
       img(src="#{imgPath}", alt="#{imgAlt}", target="_blank")
     .course-inside__project__title= title

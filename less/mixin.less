@@ -19,17 +19,25 @@
 
 }
 
-
 .button--shadowed(@size,@color){
-
 	box-shadow: 0 5 0 @size @color;
-
 }
 
 // закоментил так как этот блок ломал дефолтные медиа запросы
 // .container {
 // 	width: @container;
 // }
+
+// CLEARFIX
+.clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
 
 .heading {
 	position: relative;
@@ -110,4 +118,4 @@
 	height: @height;
 	left: @left;
 	top: @top;
-}  
+}
