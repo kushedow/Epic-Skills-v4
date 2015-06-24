@@ -6,12 +6,40 @@
   }
 }
 
+// фикс для болоков с вопросами, когда они помещаются только в 1 ряд
+@media (max-width: 716px) {
+  .course-inside {
+    .course-inside__benefits {
+      &__item {
+        width: 100% !important;
+      }
+    }
+    .course-inside__benefits {
+      &__item {
+        .course-inside__benefits__answer {
+          display: none;
+        }
+        &:first-child {
+          .course-inside__benefits__answer {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .course-inside {
     .course-inside__project {
       float: left !important;
 
       &:last-child {float: right !important;}
+    }
+    .course-inside__benefits {
+      &__item {
+        min-width: 200px !important;
+      }
     }
   }
 }

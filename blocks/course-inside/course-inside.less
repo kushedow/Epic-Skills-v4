@@ -24,11 +24,7 @@
 	padding: 0 calc(28px + 15px);
 
 	&__wrap {
-		&:extend(.clearfix all);
-		min-width: 320px;
 	}
-
-	&__item {}
 
 	&__title {
 		font-size: @h2+4px;
@@ -63,6 +59,12 @@
 		margin-bottom: 20px;
 		display: inline-block;
 		cursor: pointer;
+
+		&:hover {
+			color: @orange;
+			opacity: 0.8;
+			border-color: lighten(@orange, 20%);
+		}
 	}
 
 	&__answer {
@@ -85,8 +87,8 @@
 	&__img {
 		margin-bottom: 35px;
 		padding: 25px;
-	  background: #f7f7ef;
-	  border: 1px solid #edede4;
+		background: #f7f7ef;
+		border: 1px solid #edede4;
 
 		img {
 			max-height: 476px;

@@ -1,7 +1,7 @@
 mixin course-inside__benefits__item(heading, question, answer)
   .course-inside__benefits__item
     h3.course-inside__benefits__heading= heading
-    p.course-inside__benefits__question= question
+    span.js-accordeon.course-inside__benefits__question(href='#')= question
     p.course-inside__benefits__answer= answer
 
 mixin course-inside__project(imgPath, imgAlt, title)
